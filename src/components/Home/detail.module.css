@@ -1,0 +1,26 @@
+.section {
+  display: inline-flex;
+  margin-top: 150px;
+  margin-left: 250px;
+}
+
+.icon-div {
+  padding: 40px 30px 10px 10px;
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.icon {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icon:hover {
+  color: slateblue;
+}
+
+.image {
+  border-radius: .5rem;
+  margin-left: 30px;
+}
