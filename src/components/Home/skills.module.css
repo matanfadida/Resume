@@ -1,0 +1,19 @@
+.section{
+    row-gap: 0;
+}
+
+.fronted-header {
+    display:flex;
+    align-items: center;
+    margin-bottom: var(--mb-2-5);
+    cursor: pointer;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.skills-name {
+    justify-content: space-between;
+    color:rebeccapurple
+}
