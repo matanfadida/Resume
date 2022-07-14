@@ -1,13 +1,20 @@
+@import url(//db.onlinewebfonts.com/c/00561b492d88a5287a5def1e83a34882?family=Gumela);
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Gumela", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Gumela", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+p {
+  color: rgb(180, 180, 180);
 }

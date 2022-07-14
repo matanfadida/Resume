@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  text-align: center;
+}
+.ul {
+    margin-left: 700px;
+}
+.nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px;
+}
+
+.nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover{
+    color:SlateBlue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav h2 {
+    color: black;
+    margin-left: 100px;
+}
