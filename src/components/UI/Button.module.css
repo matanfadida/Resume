@@ -1,0 +1,11 @@
+.button {
+    color: antiquewhite;
+    background-color: SlateBlue;
+    border-radius: 8px;
+    font-size: 20px;
+    justify-content: space-between;
+    padding: 16px 20px;
+    text-decoration: none;
+    border: none;
+  }
+  
