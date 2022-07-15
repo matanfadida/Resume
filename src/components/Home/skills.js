@@ -8,6 +8,11 @@ import style from "./skills.module.css";
 const Skills = () => {
   const [toggleFronted, setToggelFronted] = useState(false);
   const [toggleBackend, setToggelBackend] = useState(false);
+  const listStyleFronted =  toggleFronted ? style["list-open"] : style["list-close"];
+  const listStyleBackend =  toggleBackend ? style["list-open"] : style["list-close"];
+
+  console.log(listStyleBackend)
+  console.log(toggleBackend)
 
   const toggleFrontedHandler = () => {
     setToggelFronted(!toggleFronted);
@@ -33,7 +38,7 @@ const Skills = () => {
             </button>
           </div>
           {toggleFronted && (
-            <div className={style.list}>
+            <div className={listStyleFronted}>
               <div>
                 <div className={style["skills-name"]}>
                   <h3>Html</h3>
@@ -85,7 +90,7 @@ const Skills = () => {
             </button>
           </div>
           {toggleBackend && (
-            <div className={style.list}>
+            <div className={listStyleBackend}>
               <div>
                 <div className={style["skills-name"]}>
                   <h3>Node-Js</h3>

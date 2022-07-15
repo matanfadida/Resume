@@ -1,6 +1,11 @@
 .section {
   row-gap: 0;
-  margin: 200px;
+  margin: 100px;
+}
+
+.section span{
+  color: rgb(180, 180, 180);
+  margin-top: -20px;
 }
 
 .header {
@@ -14,14 +19,44 @@
   padding: 0px 8px 0px 8px;
   font-size: 2rem;
   color: rebeccapurple;
-  border:none;
+  border: none;
   background-color: transparent;
-
 }
 
-.list {
-    row-gap: 1.5rem;
-    padding-left: 2.7rem;
+.list-open {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+  animation-name: listOpen;
+  animation-duration: 4s;
+}
+
+.list-close {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+  animation-name: listClose;
+  animation-duration: 4s;
+}
+
+@keyframes listOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes listClose {
+  from {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 .skills-name {
@@ -43,30 +78,29 @@
 }
 
 .html {
-    width: 80%;
+  width: 80%;
 }
 .css {
-    width: 70%;
+  width: 70%;
 }
 .js {
-    width: 90%;
+  width: 90%;
 }
 .react {
-    width: 90%;
+  width: 90%;
 }
-
 
 .node {
-    width: 70%;
+  width: 70%;
 }
 .next {
-    width: 90%;
+  width: 90%;
 }
 .mongo {
-    width: 70%;
+  width: 70%;
 }
 .sql {
-    width: 65%;
+  width: 65%;
 }
 
 .number {

@@ -1,8 +1,8 @@
 .section {
   text-align: center;
-  padding: 150px;
+  margin: 100px;
 }
 
 .section p {
-    padding: 30px;
+    padding: 20px;
 }
