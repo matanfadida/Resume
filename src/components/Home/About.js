@@ -7,6 +7,7 @@ const About = () => {
   return (
     <section className={style.section}>
       <h2 id="About">About Me</h2>
+      <span>My introduction</span>
       <p>
         I am graduating in my third year, I am in the top 10% of my class.
         Looking for an opportunity to start my programming career in a company

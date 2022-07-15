@@ -3,6 +3,11 @@
   margin: 100px;
 }
 
+.section span{
+  color: rgb(180, 180, 180);
+}
+
+
 .section p {
     padding: 20px;
 }
