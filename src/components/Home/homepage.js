@@ -5,9 +5,9 @@ import Skills from "./skills";
 const HomePage = () => {
   return (
     <div>
-      <Details/>
-      <About/>
-      <Skills/>
+      <Details />
+      <About />
+      <Skills />
     </div>
   );
 };
