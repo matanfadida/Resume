@@ -22,16 +22,6 @@ const MainNavigation = () => {
             </a>
           </li>
           <li>
-            <a href="#Sevices" className={style.li}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#Portfolio" className={style.li}>
-              Portfolio
-            </a>
-          </li>
-          <li>
             <a href="#Contact" className={style.li}>
               Contact
             </a>

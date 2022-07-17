@@ -11,8 +11,7 @@
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: var(--mb-2-5);
-  cursor: pointer;
+  justify-content: center;
 }
 
 .icon {
@@ -21,6 +20,7 @@
   color: rebeccapurple;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .list-open {

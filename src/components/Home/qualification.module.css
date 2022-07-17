@@ -1,21 +1,47 @@
-.section{
-    
+.section {
 }
 
-.section span{
-    color: rgb(180, 180, 180);
+.section span {
+  color: rgb(180, 180, 180);
 }
 
-.section i {
-    color: rgb(180, 180, 180);
+.date-color {
+  color: rgb(180, 180, 180);
+}
+
+.education {
+  padding: 20px;
+}
+
+.education i {
+  font-size: 1.4rem;
 }
 
 .icon-date {
-    display: initial;
+  display: grid;
+}
+
+.icon-color {
+  color: slateblue;
+  /* display: inline-block; */
+}
+
+.data {
+  display: inline-flex;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .detail {
-    /* display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem; */
+  padding: 20px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: rgb(180, 180, 180);
 }
