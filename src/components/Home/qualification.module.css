@@ -1,7 +1,16 @@
 .section {
+  margin-bottom: 100px;
 }
 
 .section span {
+  color: rgb(180, 180, 180);
+}
+
+.qualification-title {
+  display: inline;
+}
+
+.qualification-subtitle {
   color: rgb(180, 180, 180);
 }
 

@@ -8,11 +8,15 @@ import style from "./skills.module.css";
 const Skills = () => {
   const [toggleFronted, setToggelFronted] = useState(false);
   const [toggleBackend, setToggelBackend] = useState(false);
-  const listStyleFronted =  toggleFronted ? style["list-open"] : style["list-close"];
-  const listStyleBackend =  toggleBackend ? style["list-open"] : style["list-close"];
+  const listStyleFronted = toggleFronted
+    ? style["list-open"]
+    : style["list-close"];
+  const listStyleBackend = toggleBackend
+    ? style["list-open"]
+    : style["list-close"];
 
-  console.log(listStyleBackend)
-  console.log(toggleBackend)
+  console.log(listStyleBackend);
+  console.log(toggleBackend);
 
   const toggleFrontedHandler = () => {
     setToggelFronted(!toggleFronted);
@@ -24,8 +28,12 @@ const Skills = () => {
 
   return (
     <section className={style.section}>
-      <h2 id="Skills">Skills</h2>
-      <span>My tecnical level</span>
+      <div>
+        <h2 className={style["skills-title"]} id="Skills">Skills</h2>
+        <br />
+        <span className={style["skills-subtitle"]}>My tecnical level</span>
+      </div>
+
       <div>
         <div>
           <div className={style.header}>

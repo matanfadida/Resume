@@ -8,4 +8,10 @@
     text-decoration: none;
     border: none;
   }
-  
+
+.button:hover {
+  border-end-end-radius: 80px 80px;
+  box-shadow: 0 2px 4px rgb(128, 128, 128);
+  transition: 1s;
+  transform: translateX(0.25rem);
+}

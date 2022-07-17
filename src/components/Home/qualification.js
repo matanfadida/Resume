@@ -21,25 +21,29 @@ const Qualification = () => {
 
   return (
     <section className={style.section}>
-      <h2>qualification</h2>
-      <span>My prsonal journey</span>
+      <div>
+        <h2 className={style["qualification-title"]}>qualification</h2>
+        <br/>
+        <span className={style["qualification-subtitle"]}>My prsonal journey</span>
+      </div>
+
       <div>
         <div className={style.education}>
           <i className={style["icon-color"]}>
             <UilGraduationCap />
           </i>
           <button onClick={showEducationHandler} className={style.button}>
-            <i className={style.edu}>Education</i>
+            <i>Education</i>
           </button>
         </div>
         {showEducation && (
           <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
             <div className={style.data}>
               <SwiperSlide>
                 <div className={style.detail}>

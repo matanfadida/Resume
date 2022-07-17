@@ -1,0 +1,59 @@
+.continer{
+    display: inline-flex;
+}
+
+.section-contact{
+    padding-bottom: 30px;
+}
+
+.contact-title {
+    display:inline;
+}
+
+.contact-subtitle{
+    color: rgb(180, 180, 180);
+}
+
+.box{
+    display:grid;
+    justify-items: center;
+}
+
+.detail {
+    display:inline-flex;
+    padding-right: 30px;
+}
+.title {
+    margin-left: 0px;
+    display: inline;
+}
+.subtitle {
+    font-size: small;
+}
+
+.icon {
+    margin-top: 8px;
+    margin-right: 5px;
+    color: slateblue;
+}
+
+.contact {
+    background-color:rgb(180, 180, 180);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.25rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.contact-input {
+    width: 100%;
+    background-color:rgb(180, 180, 180);
+    color: rgb(114, 98, 98);
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.email-title {
+    display: inline-flex;
+}

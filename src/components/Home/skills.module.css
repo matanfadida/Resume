@@ -8,6 +8,14 @@
   margin-top: -20px;
 }
 
+.skills-title {
+  display:inline;
+}
+
+.skills-subtitle{
+  color: rgb(180, 180, 180);
+}
+
 .header {
   display: flex;
   align-items: center;
