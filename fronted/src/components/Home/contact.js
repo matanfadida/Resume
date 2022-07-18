@@ -23,21 +23,30 @@ const Contact = () => {
     setMessage(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    console.log(title);
-    console.log(email);
-    console.log(message);
+    const senedEmail = {
+      subject: title,
+      email: email,
+      message: message,
+    };
     if (title === "") {
       setErrorTitle(true);
     }
+    fetch("/sendEmail", {
+      method: "POST",
+      body: JSON.stringify(senedEmail),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   };
 
   return (
     <section className={style["section-contact"]}>
       <div>
         <h2 className={style["contact-title"]}>Contact Me</h2>
-        <br/>
+        <br />
         <span className={style["contact-subtitle"]}>Get in touch</span>
       </div>
       <br />
@@ -104,7 +113,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <Button>
+          <Button onSubmit={submitHandler}>
             Send Email <UilNavigator />
           </Button>
         </form>
