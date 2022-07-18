@@ -1,0 +1,56 @@
+/* .footer {
+  padding-top: 2px;
+}
+.contact {
+  row-gap: 3.5rem;
+  background-color: slateblue;
+  padding: 2rem 0 3rem;
+}
+
+.footer-title {
+  display: inline;
+}
+
+.footer-subtitle {
+  color: rgb(180, 180, 180);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer-link:hover {
+  color: coral;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.social-link:hover {
+  color: coral;
+} */
+
+.footer {
+  background-color: slateblue;
+}
+
+.list-and-social {
+  display: inline-flex;
+  
+}
+
+.footer-title {
+  display: inline;
+}
+
+.footer-subtitle {
+  color: rgb(180, 180, 180);
+}
+
+/* .footer-list{
+    margin-right:100px ;
+} */
