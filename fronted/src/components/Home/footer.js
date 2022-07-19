@@ -6,8 +6,8 @@ import { UilInstagram } from "@iconscout/react-unicons";
 const Footer = () => {
   return (
     <footer className={style.footer}>
-      <div className={style.contact}>
-        <div>
+      <div>
+        <div className={style.contact}>
           <div>
             <h1 className={style["footer-title"]}>Matan</h1>
             <br />
@@ -16,17 +16,17 @@ const Footer = () => {
           <div className={style["list-and-social"]}>
             <ul className={style["footer-list"]}>
               <li>
-                <a href="#about" className={style["footer-link"]}>
+                <a href="#About" className={style["footer-link"]}>
                   About
                 </a>
               </li>
               <li>
-                <a href="#skills" className={style["footer-link"]}>
+                <a href="#Skills" className={style["footer-link"]}>
                   Skills
                 </a>
               </li>
               <li>
-                <a href="#qualification" className={style["footer-link"]}>
+                <a href="#Qualification" className={style["footer-link"]}>
                   Qualification
                 </a>
               </li>

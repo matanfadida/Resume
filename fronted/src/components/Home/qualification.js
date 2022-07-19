@@ -22,7 +22,7 @@ const Qualification = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 className={style["qualification-title"]}>qualification</h2>
+        <h2 className={style["qualification-title"]} id="Qualification">qualification</h2>
         <br/>
         <span className={style["qualification-subtitle"]}>My prsonal journey</span>
       </div>

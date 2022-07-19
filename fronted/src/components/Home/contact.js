@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <section className={style["section-contact"]}>
       <div>
-        <h2 className={style["contact-title"]}>Contact Me</h2>
+        <h2 className={style["contact-title"]} id="Contact">Contact Me</h2>
         <br />
         <span className={style["contact-subtitle"]}>Get in touch</span>
       </div>
