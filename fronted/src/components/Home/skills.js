@@ -1,20 +1,36 @@
 import { UilBracketsCurly } from "@iconscout/react-unicons";
 import { UilAngleDown } from "@iconscout/react-unicons";
 import { UilServerConnection } from "@iconscout/react-unicons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import style from "./skills.module.css";
 
 const Skills = () => {
   const [toggleFronted, setToggelFronted] = useState(false);
   const [toggleBackend, setToggelBackend] = useState(false);
+  const [showListFronted, setShowListFronted] = useState(false);
+  const [showListBackend, setShowListBackend] = useState(false);
 
   const toggleFrontedHandler = () => {
     setToggelFronted(!toggleFronted);
+    if (toggleFronted) {
+      setTimeout(() => {
+        setShowListFronted(!showListFronted);
+      }, 3000);
+    } else {
+      setShowListFronted(true);
+    }
   };
 
   const toggleBeckendHandler = () => {
     setToggelBackend(!toggleBackend);
+    if (toggleBackend) {
+      setTimeout(() => {
+        setShowListBackend(!showListBackend);
+      }, 3000);
+    } else {
+      setShowListBackend(true);
+    }
   };
 
   return (
@@ -41,7 +57,7 @@ const Skills = () => {
           <div
             className={toggleFronted ? style["list-open"] : style["list-close"]}
           >
-            {toggleFronted && (
+            {showListFronted && (
               <div>
                 <div>
                   <div className={style["skills-name"]}>
@@ -102,42 +118,52 @@ const Skills = () => {
           <div
             className={toggleBackend ? style["list-open"] : style["list-close"]}
           >
-            <div>
-              <div className={style["skills-name"]}>
-                <h3>Node-Js</h3>
-                <span className={style.number}>70%</span>
+            {showListBackend && (
+              <div>
+                <div>
+                  <div className={style["skills-name"]}>
+                    <h3>Node-Js</h3>
+                    <span className={style.number}>70%</span>
+                  </div>
+                  <div className={style.bar}>
+                    <span
+                      className={`${style.precentags} ${style.node}`}
+                    ></span>
+                  </div>
+                </div>
+                <div>
+                  <div className={style["skills-name"]}>
+                    <h3>Next-Js</h3>
+                    <span className={style.number}>90%</span>
+                  </div>
+                  <div className={style.bar}>
+                    <span
+                      className={`${style.precentags} ${style.next}`}
+                    ></span>
+                  </div>
+                </div>
+                <div>
+                  <div className={style["skills-name"]}>
+                    <h3>MongoDB</h3>
+                    <span className={style.number}>70%</span>
+                  </div>
+                  <div className={style.bar}>
+                    <span
+                      className={`${style.precentags} ${style.mongo}`}
+                    ></span>
+                  </div>
+                </div>
+                <div>
+                  <div className={style["skills-name"]}>
+                    <h3>SQL</h3>
+                    <span className={style.number}>65%</span>
+                  </div>
+                  <div className={style.bar}>
+                    <span className={`${style.precentags} ${style.sql}`}></span>
+                  </div>
+                </div>
               </div>
-              <div className={style.bar}>
-                <span className={`${style.precentags} ${style.node}`}></span>
-              </div>
-            </div>
-            <div>
-              <div className={style["skills-name"]}>
-                <h3>Next-Js</h3>
-                <span className={style.number}>90%</span>
-              </div>
-              <div className={style.bar}>
-                <span className={`${style.precentags} ${style.next}`}></span>
-              </div>
-            </div>
-            <div>
-              <div className={style["skills-name"]}>
-                <h3>MongoDB</h3>
-                <span className={style.number}>70%</span>
-              </div>
-              <div className={style.bar}>
-                <span className={`${style.precentags} ${style.mongo}`}></span>
-              </div>
-            </div>
-            <div>
-              <div className={style["skills-name"]}>
-                <h3>SQL</h3>
-                <span className={style.number}>65%</span>
-              </div>
-              <div className={style.bar}>
-                <span className={`${style.precentags} ${style.sql}`}></span>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

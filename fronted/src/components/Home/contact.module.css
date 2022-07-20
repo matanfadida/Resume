@@ -57,3 +57,7 @@
 .email-title {
     display: inline-flex;
 }
+
+.send-icon {
+    vertical-align:middle;
+}

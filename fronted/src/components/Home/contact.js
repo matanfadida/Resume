@@ -114,7 +114,7 @@ const Contact = () => {
             </div>
           </div>
           <Button onSubmit={submitHandler}>
-            Send Email <UilNavigator />
+            Send Email <i className={style["send-icon"]}><UilNavigator /></i>
           </Button>
         </form>
       </div>

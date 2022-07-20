@@ -1,0 +1,37 @@
+.volunteering {
+  padding-bottom: 100px;
+}
+
+.volunteering-title {
+  display: inline;
+}
+
+.volunteering-subtitle {
+  color: rgb(180, 180, 180);
+}
+
+.image-text {
+  display: inline-flex;
+  padding: 50px;
+}
+
+.imgae {
+  border-radius: 30px;
+}
+
+.text {
+  margin-top: 100px;
+  text-align-last: center;
+  width: 400px;
+  word-break: keep-all;
+  padding-left: 40px;
+}
+
+.icon {
+  vertical-align:middle;
+}
+
+.div-button{
+    display:inline-block;
+
+}
