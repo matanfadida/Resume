@@ -17,18 +17,26 @@
     overflow: hidden;
   }
   
-  .header {
-    background: #4f005f;
+  .header-error {
+    background: rgb(194, 31, 31);
     padding: 1rem;
+    text-align: left;
+  }
+
+  .header-work {
+    background: rgb(17, 170, 17);
+    padding: 1rem;
+    text-align: left;
   }
   
-  .header h2 {
+  .h2 {
     margin: 0;
     color: white;
   }
   
   .content {
     padding: 1rem;
+    text-align: left;
   }
   
   .actions {

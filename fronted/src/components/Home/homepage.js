@@ -17,7 +17,6 @@ const HomePage = () => {
       <Volunteering/>
       <Contact/>
       <Footer/>
-      <PopMessage title="matan" text="asdas"/>
     </div>
   );
 };

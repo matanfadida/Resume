@@ -1,22 +1,39 @@
 import Button from "./Button";
 import Card from "./Card";
 
+import { UilTimesCircle } from "@iconscout/react-unicons";
+import { UilCheckCircle } from "@iconscout/react-unicons";
+
 import style from "./pop-message.module.css";
 
 const PopMessage = (props) => {
-  const { title, text } = props;
+  const { icon, title, text } = props;
+
+  const styles = icon === 'X' ? style["header-error"] : style["header-work"];
+  const iconShow = icon === 'X' ? <UilTimesCircle size='50' color='rgb(194, 31, 31)'/> : <UilCheckCircle size='50' color='rgb(17, 170, 17)'/>
+
+  const closeAndShowHandler = () => {
+    props.onClick();
+  }
+
   return (
-    <Card className={style.modal}>
-      <header className={style.header}>
-        <h2>{title}</h2>
-      </header>
-      <div className={style.content}>
-        <p>{text}</p>
-      </div>
-      <footer className={style.action}>
-        <Button>Okay</Button>
-      </footer>
-    </Card>
+    <div>
+      <div className={style.backdrop} onClick={closeAndShowHandler}/>
+      <Card className={style.modal}>
+        <header className={styles}>
+          <h2 className={style.h2}>{title}</h2>
+        </header>
+        <div>
+          {iconShow}
+        </div>
+        <div className={style.content}>
+          <p>{text}</p>
+        </div>
+        <footer className={style.actions}>
+          <Button onSubmit={closeAndShowHandler}>Okay</Button>
+        </footer>
+      </Card>
+    </div>
   );
 };
 

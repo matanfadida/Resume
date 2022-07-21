@@ -4,11 +4,17 @@ import { UilMobileAndroid } from "@iconscout/react-unicons";
 import { UilEnvelopeAlt } from "@iconscout/react-unicons";
 import { UilMapMarker } from "@iconscout/react-unicons";
 import { UilNavigator } from "@iconscout/react-unicons";
+import { UilSpinnerAlt } from "@iconscout/react-unicons";
 import { useState } from "react";
 import Button from "../UI/Button";
+import PopMessage from "../UI/pop-message";
+import Card from "../UI/Card";
 
 const Contact = () => {
+  const [Loding, setLoding] = useState(false);
   const [errorTitle, setErrorTitle] = useState(false);
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
@@ -23,6 +29,11 @@ const Contact = () => {
     setMessage(event.target.value);
   };
 
+  const popMessageHandler = () => {
+    console.log("con");
+    setErrorTitle(false);
+  };
+
   const submitHandler = async (event) => {
     event.preventDefault();
     const senedEmail = {
@@ -34,6 +45,16 @@ const Contact = () => {
       setErrorTitle(true);
       return;
     }
+    if (email === "") {
+      setErrorEmail(true);
+      return;
+    }
+    if (message === "") {
+      setErrorMessage(true);
+      return;
+    }
+    setLoding(true);
+
     const respons = fetch("/sendEmail", {
       method: "POST",
       body: JSON.stringify(senedEmail),
@@ -43,6 +64,7 @@ const Contact = () => {
     });
     const data = respons.JSON();
     console.log(data);
+    setLoding(true);
   };
 
   return (
@@ -108,7 +130,6 @@ const Contact = () => {
                 />
               </div>
             </div>
-
             <div className={style.contact}>
               <label>Message</label>
               <textarea
@@ -128,6 +149,41 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      {errorTitle && (
+        <PopMessage
+          onClick={popMessageHandler}
+          icon="X"
+          title="Error"
+          text="title can't be empty !"
+        />
+      )}
+      {errorEmail && (
+        <PopMessage
+          onClick={popMessageHandler}
+          icon="X"
+          title="Error"
+          text="email can't be empty !"
+        />
+      )}
+      {errorMessage && (
+        <PopMessage
+          onClick={popMessageHandler}
+          icon="X"
+          title="Error"
+          text="message can't be empty !"
+        />
+      )}
+      {!errorTitle && errorEmail && errorMessage && (
+        <PopMessage
+          onClick={popMessageHandler}
+          icon={"V"}
+          title={"Successfully"}
+          text={"email is sened secssfully thanks you !"}
+        />
+      )}
+      {/* <Card>
+        <UilSpinnerAlt size="50" />
+      </Card> */}
     </section>
   );
 };
