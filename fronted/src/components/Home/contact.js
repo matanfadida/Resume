@@ -33,19 +33,23 @@ const Contact = () => {
     if (title === "") {
       setErrorTitle(true);
     }
-    fetch("/sendEmail", {
+    const respons = fetch("/sendEmail", {
       method: "POST",
       body: JSON.stringify(senedEmail),
       headers: {
         "Content-Type": "application/json",
       },
     });
+    const data = respons.JSON();
+    console.log(data);
   };
 
   return (
     <section className={style["section-contact"]}>
       <div>
-        <h2 className={style["contact-title"]} id="Contact">Contact Me</h2>
+        <h2 className={style["contact-title"]} id="Contact">
+          Contact Me
+        </h2>
         <br />
         <span className={style["contact-subtitle"]}>Get in touch</span>
       </div>
@@ -113,9 +117,14 @@ const Contact = () => {
               />
             </div>
           </div>
-          <Button onSubmit={submitHandler}>
-            Send Email <i className={style["send-icon"]}><UilNavigator /></i>
-          </Button>
+          <div className={style["div-button"]}>
+            <Button onSubmit={submitHandler}>
+              Send Email{" "}
+              <i className={style["send-icon"]}>
+                <UilNavigator />
+              </i>
+            </Button>
+          </div>
         </form>
       </div>
     </section>
