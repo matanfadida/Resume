@@ -30,12 +30,12 @@ app.post("/sendEmail", (req, res) => {
 
   transporter.sendMail(mailDetails, (err, success) => {
     if (err) {
-      console.log(err);
+      res.status(201).send("error");
     } else {
-      console.log("Email sent successfully");
+      res.status(201).send("Successfully");
     }
   });
-  res.status(201).send("Successfully");
+  
 });
 
 app.listen(4000);

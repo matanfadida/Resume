@@ -1,7 +1,7 @@
 import { UilBracketsCurly } from "@iconscout/react-unicons";
 import { UilAngleDown } from "@iconscout/react-unicons";
 import { UilServerConnection } from "@iconscout/react-unicons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Skill from "./skills-links";
 
 import style from "./skills.module.css";

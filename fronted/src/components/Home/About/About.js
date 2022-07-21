@@ -2,9 +2,28 @@
 import style from "./about.module.css";
 
 import { UilDownloadAlt } from "@iconscout/react-unicons";
+import { UilArrowUp } from '@iconscout/react-unicons';
 import Button from "../../UI/Button";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [scroll, setScroll] = useState(false);
+  const changeBackground = () => {
+    if(window.scrollY > 0){
+      setScroll(false);
+    }
+    else{
+      setScroll(true);
+    }
+  }
+
+  useEffect(() => {
+    changeBackground();
+    window.addEventListener("scroll",changeBackground);
+  })
+
+  const styles = scroll ? style.scrollUp : style["show-scroll"]
+
   return (
     <section className={style.section}>
       <div>
@@ -27,6 +46,7 @@ const About = () => {
           Downlond My CV <UilDownloadAlt />
         </a>
       </Button>
+      <a href="#" className={styles}><UilArrowUp/></a>
     </section>
   );
 };

@@ -27,7 +27,7 @@ const PopMessage = (props) => {
           {iconShow}
         </div>
         <div className={style.content}>
-          <p>{text}</p>
+          <p className={style.text}>{text}</p>
         </div>
         <footer className={style.actions}>
           <Button onSubmit={closeAndShowHandler}>Okay</Button>

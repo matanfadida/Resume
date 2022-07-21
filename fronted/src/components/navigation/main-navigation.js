@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import style from "./main-navigation.module.css";
-import { UilAlignJustify } from '@iconscout/react-unicons';
+// import { UilAlignJustify } from '@iconscout/react-unicons';
 
 const MainNavigation = () => {
 
   const [navbar, setNavbar] = useState(true);
-  const [showIconMain, setShowIconMain] = useState(false);
+  // const [showIconMain, setShowIconMain] = useState(false);
 
   const changeBackground = () => {
     if(window.scrollY > 0){
@@ -25,7 +25,7 @@ const MainNavigation = () => {
     <header>
       <nav className={navbar ? style.nav : style["nav-move"]}>
         <h2 className={style.h2}>Fadida Matan</h2>
-        {showIconMain ? <button className={style.button}><UilAlignJustify/></button> : <ul  className={style.ul}>
+        <ul  className={style.ul}>
           <li className={style.li}>
             <a href="#top" className={style.a}>
               Home
@@ -46,7 +46,7 @@ const MainNavigation = () => {
               Contact
             </a>
           </li>
-        </ul>}
+        </ul>
       </nav>
     </header>
   );
