@@ -1,3 +1,4 @@
+import PopMessage from "../UI/pop-message";
 import About from "./About";
 import Contact from "./contact";
 import Details from "./detail";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Volunteering/>
       <Contact/>
       <Footer/>
+      <PopMessage title="matan" text="asdas"/>
     </div>
   );
 };

@@ -32,6 +32,7 @@ const Contact = () => {
     };
     if (title === "") {
       setErrorTitle(true);
+      return;
     }
     const respons = fetch("/sendEmail", {
       method: "POST",
