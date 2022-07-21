@@ -1,0 +1,21 @@
+.box{
+    display:grid;
+    justify-items: center;
+}
+
+.detail {
+    display:inline-flex;
+    padding-right: 30px;
+}
+.icon {
+    margin-top: 8px;
+    margin-right: 5px;
+    color: slateblue;
+}
+.title {
+    margin-left: 0px;
+    display: inline;
+}
+.subtitle {
+    font-size: small;
+}

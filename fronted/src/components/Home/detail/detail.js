@@ -2,7 +2,8 @@ import style from "./detail.module.css";
 import { UilGithubAlt } from "@iconscout/react-unicons";
 import { UilLinkedin } from "@iconscout/react-unicons";
 import { UilCommentMedical } from "@iconscout/react-unicons";
-import Button from "../UI/Button";
+import Button from "../../UI/Button";
+
 const Details = () => {
   return (
     <div className={style.center}>
@@ -21,11 +22,10 @@ const Details = () => {
         <div className={style.details}>
           <h1>I,m Matan Fadida</h1>
           <p className={style.p}>
-            this is my offcial portfolio website to showes all Details and work
-            development
+            this is my offcial resume website to showes all Details about me
           </p>
           <Button>
-            <a href="/">
+            <a href="#Contact">
               Contact Me <UilCommentMedical />
             </a>
           </Button>
@@ -38,6 +38,7 @@ const Details = () => {
             width={200}
             height={200}
             className={style.image}
+            id="About"
           />
         </div>
       </section>

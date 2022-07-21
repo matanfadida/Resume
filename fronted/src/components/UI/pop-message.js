@@ -23,7 +23,7 @@ const PopMessage = (props) => {
         <header className={styles}>
           <h2 className={style.h2}>{title}</h2>
         </header>
-        <div>
+        <div className={style.icon}>
           {iconShow}
         </div>
         <div className={style.content}>

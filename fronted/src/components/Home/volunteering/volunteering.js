@@ -1,7 +1,7 @@
 import { UilArrowRight } from "@iconscout/react-unicons";
 
 import style from "./volunteering.module.css";
-import Button from "../UI/Button";
+import Button from "../../UI/Button";
 
 const Volunteering = () => {
   return (

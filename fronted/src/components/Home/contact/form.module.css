@@ -1,0 +1,28 @@
+.email-title {
+    display: inline-flex;
+}
+
+.contact {
+    background-color:rgb(180, 180, 180);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.25rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.contact-input {
+    width: 100%;
+    background-color:rgb(180, 180, 180);
+    color: rgb(114, 98, 98);
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.send-icon {
+    vertical-align:middle;
+}
+
+.div-button{
+    margin-top: 30px;
+}

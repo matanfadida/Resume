@@ -9,8 +9,6 @@ const app = express();
 app.use(bodyParser.json(), urlencoded({ extended: false }));
 
 app.post("/sendEmail", (req, res) => {
-  console.log("aa");
-  console.log(req.body);
   const body = req.body;
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -26,8 +24,8 @@ app.post("/sendEmail", (req, res) => {
   const mailDetails = {
     from: "matanTestWeb@gmail.com",
     to: "matanfadida7@gmail.com",
-    subject: "",
-    message: "",
+    subject: body.subject,
+    text: "The email is:" + body.email + "\n" + body.message,
   };
 
   transporter.sendMail(mailDetails, (err, success) => {
@@ -37,7 +35,7 @@ app.post("/sendEmail", (req, res) => {
       console.log("Email sent successfully");
     }
   });
-  res.status(201);
+  res.status(201).send("Successfully");
 });
 
 app.listen(4000);

@@ -1,11 +1,10 @@
-import PopMessage from "../UI/pop-message";
-import About from "./About";
-import Contact from "./contact";
-import Details from "./detail";
-import Footer from "./footer";
-import Qualification from "./qualification";
-import Skills from "./skills";
-import Volunteering from "./volunteering";
+import About from "./About/About";
+import Contact from "./contact/contact";
+import Details from "./detail/detail";
+import Footer from "./footer/footer";
+import Qualification from "./qualification/qualification";
+import Skills from "./Skills/skills";
+import Volunteering from "./volunteering/volunteering";
 
 const HomePage = () => {
   return (

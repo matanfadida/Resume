@@ -1,0 +1,15 @@
+.continer{
+    display: inline-flex;
+}
+
+.section-contact{
+    padding-bottom: 30px;
+}
+
+.contact-title {
+    display:inline;
+}
+
+.contact-subtitle{
+    color: rgb(180, 180, 180);
+}
