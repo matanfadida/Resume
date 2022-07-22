@@ -19,3 +19,17 @@ a {
 p {
   color: rgb(180, 180, 180);
 }
+
+::-webkit-scrollbar {
+  width: 0.60rem;
+  background-color: rgb(237, 237, 237);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(173, 173, 173);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: slateblue;
+}

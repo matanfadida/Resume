@@ -48,8 +48,20 @@
   font-weight: bold;
 }
 
+.a-dark {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.a-dark:hover {
+  color: darkorange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 .h2 {
-  color: black;
   margin-left: 100px;
 }
 
@@ -58,4 +70,8 @@
     border: none;
     background-color: white;
     cursor: pointer;
+}
+
+.icon {
+  padding-left: 20px;
 }
