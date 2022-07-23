@@ -64,7 +64,7 @@ const Skills = () => {
             <i className={theme ? style["icon-dark"] : style.icon}>
               <UilBracketsCurly />
             </i>
-            <h1>Fronted Development</h1>
+            <h1 style={theme ? {color:'darkorange'} : {color:'black'}}>Fronted Development</h1>
             <button onClick={toggleFrontedHandler} className={theme ? style["icon-dark"] : style.icon}>
               <UilAngleDown />
             </button>
@@ -87,7 +87,7 @@ const Skills = () => {
             <i className={theme ? style["icon-dark"] : style.icon}>
               <UilServerConnection />
             </i>
-            <h1 id="Qualification">Beckend Development</h1>
+            <h1 id="Qualification" style={theme ? {color:'darkorange'} : {color:'black'}}>Beckend Development</h1>
             <button onClick={toggleBeckendHandler} className={theme ? style["icon-dark"] : style.icon}>
               <UilAngleDown />
             </button>
