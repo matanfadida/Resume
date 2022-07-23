@@ -59,6 +59,11 @@
   text-decoration: none;
   font-weight: bold;
 }
+.a.activeS {
+  color: darkorange;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
 .h2 {
@@ -74,4 +79,8 @@
 
 .icon {
   padding-left: 20px;
+}
+.q {
+  border-top: 4px solid darkorange;
+  border-radius: 3px;
 }

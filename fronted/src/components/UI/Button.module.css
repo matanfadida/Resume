@@ -1,16 +1,35 @@
 .button {
-    color: antiquewhite;
-    background-color: SlateBlue;
-    border-radius: 8px;
-    font-size: 20px;
-    justify-content: space-between;
-    padding: 16px 20px;
-    text-decoration: none;
-    border: none;
-    transition: 2s;
-  }
+  color: antiquewhite;
+  background-color: SlateBlue;
+  border-radius: 8px;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 16px 20px;
+  text-decoration: none;
+  border: none;
+  transition: 2s;
+}
 
 .button:hover {
+  border-end-end-radius: 80px 80px;
+  box-shadow: 0 2px 4px rgb(128, 128, 128);
+  transition: 1s;
+  transform: translateX(0.25rem);
+}
+
+.button-dark {
+  background-color: darkorange;
+  color: white;
+
+  border-radius: 8px;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 16px 20px;
+  text-decoration: none;
+  border: none;
+  transition: 2s;
+}
+.button-dark:hover {
   border-end-end-radius: 80px 80px;
   box-shadow: 0 2px 4px rgb(128, 128, 128);
   transition: 1s;

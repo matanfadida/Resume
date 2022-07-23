@@ -4,9 +4,12 @@ import style from "./about.module.css";
 import { UilDownloadAlt } from "@iconscout/react-unicons";
 import { UilArrowUp } from '@iconscout/react-unicons';
 import Button from "../../UI/Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../../../App";
 
 const About = () => {
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
   const [scroll, setScroll] = useState(false);
   const changeBackground = () => {
     if(window.scrollY > 0){
@@ -27,7 +30,7 @@ const About = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 className={style["about-title"]}>About Me</h2>
+        <h2 className={theme ? style["about-title-dark"] : style["about-title"]}>About Me</h2>
         <br />
         <span className={style["about-subtitle"]}>My introduction</span>
       </div>

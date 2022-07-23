@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
 import About from "./About/About";
 import Contact from "./contact/contact";
 import Details from "./detail/detail";
@@ -7,8 +9,12 @@ import Skills from "./Skills/skills";
 import Volunteering from "./volunteering/volunteering";
 
 const HomePage = () => {
+  const ConTex = useContext(ThemeContext);
+  const theme = ConTex.theme;
+  console.log('asdas', theme)
   return (
-    <div>
+    <div style={theme === 'light' ? {backgroundColor: 'white'} : {backgroundColor:"#212121"}}>
+      <br/>
       <Details />
       <About />
       <Skills />

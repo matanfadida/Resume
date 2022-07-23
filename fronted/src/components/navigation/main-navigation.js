@@ -7,11 +7,11 @@ import { ThemeContext } from "../../App";
 
 const MainNavigation = () => {
 
-  const conTex = useContext(ThemeContext);
+  const conTheme = useContext(ThemeContext);
   const [navbar, setNavbar] = useState(true);
-  const themeState = conTex.theme === 'dark';
+  const themeState = conTheme.theme === 'dark';
   // const [showIconMain, setShowIconMain] = useState(false);
-  console.log(conTex)
+  console.log(conTheme)
 
   const changeBackground = () => {
     if(window.scrollY > 0){
@@ -52,7 +52,7 @@ const MainNavigation = () => {
               Contact
             </a>
           </li>
-          <i className={style.icon}><UilMoon onClick={conTex.toggleThemeHandler}/></i>
+          <i className={style.icon}><UilMoon onClick={conTheme.toggleThemeHandler}/></i>
         </ul>
       </nav>
     </header>

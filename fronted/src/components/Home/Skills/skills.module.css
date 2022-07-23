@@ -11,6 +11,10 @@
 .skills-title {
   display:inline;
 }
+.skills-title-dark {
+  color: darkorange;
+  display:inline;
+}
 
 
 .skills-subtitle{
@@ -27,6 +31,14 @@
   padding: 0px 8px 0px 8px;
   font-size: 2rem;
   color: rebeccapurple;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.icon-dark {
+  padding: 0px 8px 0px 8px;
+  font-size: 2rem;
+  color: darkorange;
   border: none;
   background-color: transparent;
   cursor: pointer;

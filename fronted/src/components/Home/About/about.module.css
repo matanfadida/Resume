@@ -11,6 +11,10 @@
 .about-title {
   display:inline;
 }
+.about-title-dark {
+  color:darkorange;
+  display:inline;
+}
 
 .about-subtitle{
   color: rgb(180, 180, 180);

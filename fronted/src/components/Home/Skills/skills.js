@@ -1,8 +1,9 @@
 import { UilBracketsCurly } from "@iconscout/react-unicons";
 import { UilAngleDown } from "@iconscout/react-unicons";
 import { UilServerConnection } from "@iconscout/react-unicons";
-import { useState } from "react";
-import Skill from "./skills-links";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../../App";
+import Skill from "./skill";
 
 import style from "./skills.module.css";
 
@@ -24,6 +25,9 @@ const Skills = () => {
   const [toggleBackend, setToggelBackend] = useState(false);
   const [showListFronted, setShowListFronted] = useState(false);
   const [showListBackend, setShowListBackend] = useState(false);
+  
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
 
   const toggleFrontedHandler = () => {
     setToggelFronted(!toggleFronted);
@@ -50,18 +54,18 @@ const Skills = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 className={style["skills-title"]}>Skills</h2>
+        <h2 className={theme ? style["skills-title-dark"] : style["skills-title"]}>Skills</h2>
         <br />
         <span className={style["skills-subtitle"]}>My tecnical level</span>
       </div>
       <div>
         <div>
           <div className={style.header}>
-            <i className={style.icon}>
+            <i className={theme ? style["icon-dark"] : style.icon}>
               <UilBracketsCurly />
             </i>
             <h1>Fronted Development</h1>
-            <button onClick={toggleFrontedHandler} className={style.icon}>
+            <button onClick={toggleFrontedHandler} className={theme ? style["icon-dark"] : style.icon}>
               <UilAngleDown />
             </button>
           </div>
@@ -80,11 +84,11 @@ const Skills = () => {
 
         <div>
           <div className={style.header}>
-            <i className={style.icon}>
+            <i className={theme ? style["icon-dark"] : style.icon}>
               <UilServerConnection />
             </i>
             <h1 id="Qualification">Beckend Development</h1>
-            <button onClick={toggleBeckendHandler} className={style.icon}>
+            <button onClick={toggleBeckendHandler} className={theme ? style["icon-dark"] : style.icon}>
               <UilAngleDown />
             </button>
           </div>

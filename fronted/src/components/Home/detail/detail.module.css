@@ -23,6 +23,16 @@
   color: slateblue;
 }
 
+.icon-dark {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icon-dark:hover {
+  color: darkorange;
+}
+
 .image {
   border-radius: .5rem;
   margin-left: 30px;
@@ -30,4 +40,8 @@
 
 .details {
   text-align:initial;
+}
+
+.dark {
+  color: darkorange;
 }
