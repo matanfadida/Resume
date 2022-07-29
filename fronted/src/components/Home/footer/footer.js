@@ -2,12 +2,18 @@ import style from "./footer.module.css";
 
 import { UilFacebookF } from "@iconscout/react-unicons";
 import { UilInstagram } from "@iconscout/react-unicons";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Footer = () => {
+  
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
+  
   return (
-    <footer className={style.footer}>
+    <footer className={theme ? style["footer-dark"] : style.footer}>
       <div>
-        <div className={style.contact}>
+        <div className={theme ? style["contact-dark"] : style.contact}>
           <div>
             <h1 className={style["footer-title"]}>Matan</h1>
             <br />
@@ -16,17 +22,17 @@ const Footer = () => {
           <div className={style["list-and-social"]}>
             <ul className={style["footer-list"]}>
               <li>
-                <a href="#About" className={style["footer-link"]}>
+                <a href="#About" className={theme ? style["footer-link-dark"] : style["footer-link"]}>
                   About
                 </a>
               </li>
               <li>
-                <a href="#Skills" className={style["footer-link"]}>
+                <a href="#Skills" className={theme ? style["footer-link-dark"] : style["footer-link"]}>
                   Skills
                 </a>
               </li>
               <li>
-                <a href="#Qualification" className={style["footer-link"]}>
+                <a href="#Qualification" className={theme ? style["footer-link-dark"] : style["footer-link"]}>
                   Qualification
                 </a>
               </li>
@@ -34,13 +40,13 @@ const Footer = () => {
             <div className={style["socials-media"]}>
               <a
                 href="https://www.facebook.com/matanfadida"
-                className={style["social-link"]}
+                className={theme ? style["social-link-dark"] : style["social-link"]}
               >
                 <UilFacebookF />
               </a>
               <a
                 href="https://www.instagram.com/matanfadida/"
-                className={style["social-link"]}
+                className={theme ? style["social-link-dark"] : style["social-link"]}
                 target="blank"
               >
                 <UilInstagram />

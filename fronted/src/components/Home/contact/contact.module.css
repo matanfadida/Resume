@@ -9,6 +9,10 @@
 .contact-title {
     display:inline;
 }
+.contact-title-dark {
+    display:inline;
+    color: darkorange;
+}
 
 .contact-subtitle{
     color: rgb(180, 180, 180);

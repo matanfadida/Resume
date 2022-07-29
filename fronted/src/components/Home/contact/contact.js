@@ -1,9 +1,10 @@
 import style from "./contact.module.css";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DetailContact from "./detail-contact";
 import PopUp from "./show-popup";
 import Form from "./form";
+import { ThemeContext } from "../../../App";
 
 const Contact = () => {
   const [Loding, setLoding] = useState(false);
@@ -14,6 +15,9 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
+
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
 
   const emailHandler = (event) => {
     setEmail(event.target.value);
@@ -69,7 +73,7 @@ const Contact = () => {
   return (
     <section className={style["section-contact"]}>
       <div>
-        <h2 className={style["contact-title"]} id="Contact">
+        <h2 className={theme ? style["contact-title-dark"] : style["contact-title"]} id="Contact">
           Contact Me
         </h2>
         <br />

@@ -1,61 +1,61 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header-error {
+  background: rgb(194, 31, 31);
+  padding: 1rem;
+  text-align: left;
+}
+
+.header-work {
+  background: rgb(17, 170, 17);
+  padding: 1rem;
+  text-align: left;
+}
+
+.h2 {
+  margin: 0;
+  color: white;
+}
+
+.content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon {
+  margin-top: 30px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
   .modal {
-    position: fixed;
-    top: 30vh;
-    left: 10%;
-    width: 80%;
-    z-index: 100;
-    overflow: hidden;
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
-  
-  .header-error {
-    background: rgb(194, 31, 31);
-    padding: 1rem;
-    text-align: left;
-  }
-
-  .header-work {
-    background: rgb(17, 170, 17);
-    padding: 1rem;
-    text-align: left;
-  }
-  
-  .h2 {
-    margin: 0;
-    color: white;
-  }
-  
-  .content {
-    padding: 1rem;
-    text-align: left;
-  }
-  
-  .actions {
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .icon{
-    margin-top: 30px;
-  }
-
-  .text{
-    font-size: 20px;
-  }
-  
-  @media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
-  }
+}

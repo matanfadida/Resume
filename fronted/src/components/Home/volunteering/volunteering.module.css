@@ -6,6 +6,11 @@
   display: inline;
 }
 
+.volunteering-title-dark {
+  display: inline;
+  color: darkorange;
+}
+
 .volunteering-subtitle {
   color: rgb(180, 180, 180);
 }

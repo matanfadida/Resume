@@ -10,6 +10,11 @@
   display: inline;
 }
 
+.qualification-title-dark {
+  display: inline;
+  color: darkorange;
+}
+
 .qualification-subtitle {
   color: rgb(180, 180, 180);
 }
@@ -32,7 +37,9 @@
 
 .icon-color {
   color: slateblue;
-  /* display: inline-block; */
+}
+.icon-color-dark {
+  color: white;
 }
 
 .data {
@@ -53,4 +60,18 @@
 
 .button:hover {
   color: rgb(180, 180, 180);
+}
+
+.button-dark {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: darkorange;
+}
+
+.button-dark:hover {
+  color: white;
+}
+.switch {
+  background-color: black;
 }

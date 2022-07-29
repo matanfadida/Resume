@@ -10,10 +10,13 @@ import "swiper/css/pagination";
 
 import { UilGraduationCap } from "@iconscout/react-unicons";
 import { UilCalendarAlt } from "@iconscout/react-unicons";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../../App";
 
 const Qualification = () => {
   const [showEducation, setShowEducation] = useState(false);
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
 
   const showEducationHandler = () => {
     setShowEducation(!showEducation);
@@ -22,17 +25,17 @@ const Qualification = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 className={style["qualification-title"]}>qualification</h2>
+        <h2 className={theme ? style["qualification-title-dark"] : style["qualification-title"]}>qualification</h2>
         <br/>
         <span className={style["qualification-subtitle"]}>My prsonal journey</span>
       </div>
 
       <div>
         <div className={style.education}>
-          <i className={style["icon-color"]}>
+          <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
             <UilGraduationCap />
           </i>
-          <button onClick={showEducationHandler} className={style.button}>
+          <button onClick={showEducationHandler} className={theme ? style["button-dark"] : style.button}>
             <i>Education</i>
           </button>
         </div>
@@ -47,10 +50,10 @@ const Qualification = () => {
             <div className={style.data}>
               <SwiperSlide>
                 <div className={style.detail}>
-                  <h3>software engineer</h3>
+                  <h3 style={theme ? {color:"darkorange"} :{}}>software engineer</h3>
                   <span>Sami-Samhoon - Beer Shave</span>
                   <div className={style["icon-date"]}>
-                    <i className={style["icon-color"]}>
+                    <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
                     <i className={style["date-color"]}>10/2019 - Now</i>
@@ -59,10 +62,10 @@ const Qualification = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className={style.detail}>
-                  <h3>React - Hooks</h3>
+                  <h3 style={theme ? {color:"darkorange"} :{}}>React - Hooks</h3>
                   <span>Udemy - Maximilian Schwarzmüller</span>
                   <div className={style["icon-date"]}>
-                    <i className={style["icon-color"]}>
+                    <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
                     <i className={style["date-color"]}>10/2021</i>
@@ -71,10 +74,10 @@ const Qualification = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className={style.detail}>
-                  <h3>NextJs</h3>
+                  <h3 style={theme ? {color:"darkorange"} :{}}>NextJs</h3>
                   <span>Udemy - Maximilian Schwarzmüller</span>
                   <div className={style["icon-date"]}>
-                    <i className={style["icon-color"]}>
+                    <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
                     <i className={style["date-color"]}>03/2022</i>
@@ -83,10 +86,10 @@ const Qualification = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className={style.detail}>
-                  <h3>NodeJs</h3>
+                  <h3 style={theme ? {color:"darkorange"} :{}}>NodeJs</h3>
                   <span>Udemy - Maximilian Schwarzmüller</span>
                   <div className={style["icon-date"]}>
-                    <i className={style["icon-color"]}>
+                    <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
                     <i className={style["date-color"]}>07/2022 - Now</i>

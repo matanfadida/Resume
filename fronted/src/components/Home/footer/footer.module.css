@@ -11,6 +11,19 @@
   display: inline-flex;
 }
 
+.footer-dark {
+  background-color: rgb(18, 17, 17);
+  color: #FFF;
+  margin-bottom: -20px;
+}
+
+.contact-dark {
+  row-gap: 3.5rem;
+  background-color: rgb(18, 17, 17);
+  padding: 2rem 0 4rem;
+  display: inline-flex;
+}
+
 .list-and-social {
   display: inline-flex;
   padding-top: 20px;
@@ -44,4 +57,20 @@
 
 .social-link:hover{
   color: rgb(186, 186, 186);
+}
+
+.footer-link-dark{
+  margin: 30px;
+}
+
+.footer-link-dark:hover{
+  color: darkorange;
+}
+
+.social-link-dark{
+  margin: 5px;
+}
+
+.social-link-dark:hover{
+  color: darkorange;
 }

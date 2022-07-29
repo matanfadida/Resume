@@ -26,6 +26,7 @@ const About = () => {
   })
 
   const styles = scroll ? style.scrollUp : style["show-scroll"]
+  const stylesDark = scroll ? style["scrollUp-dark"] : style["show-scroll-dark"]
 
   return (
     <section className={style.section}>
@@ -49,7 +50,7 @@ const About = () => {
           Downlond My CV <UilDownloadAlt />
         </a>
       </Button>
-      <a href="#" className={styles}><UilArrowUp/></a>
+      <a href="#" className={theme ? stylesDark : styles}><UilArrowUp/></a>
     </section>
   );
 };

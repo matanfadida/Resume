@@ -33,3 +33,10 @@ p {
 ::-webkit-scrollbar-thumb:hover{
   background-color: slateblue;
 }
+.swiper-pagination-bullet-active {
+  background-color: rgb(143, 20, 200) !important;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: rgb(135, 135, 135);
+}

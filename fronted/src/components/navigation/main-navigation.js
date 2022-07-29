@@ -29,7 +29,7 @@ const MainNavigation = () => {
 
   return (
     <header>
-      <nav className={navbar ? style.nav : style["nav-move"]} style={themeState ? {backgroundColor:'#212121', color:"darkorange"} : null}>
+      <nav className={navbar ? style.nav : style["nav-move"]} style={themeState ? {backgroundColor:'rgb(18, 17, 17)', color:"darkorange"} : null}>
         <h2 className={style.h2}>Fadida Matan</h2>
         <ul  className={style.ul}>
           <li className={style.li}>

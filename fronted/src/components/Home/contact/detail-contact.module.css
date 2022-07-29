@@ -12,10 +12,25 @@
     margin-right: 5px;
     color: slateblue;
 }
+.icon-dark {
+    margin-top: 8px;
+    margin-right: 5px;
+    color: white;
+}
 .title {
     margin-left: 0px;
     display: inline;
 }
 .subtitle {
     font-size: small;
+}
+
+.title-dark {
+    margin-left: 0px;
+    display: inline;
+    color: darkorange;
+}
+.subtitle-dark {
+    font-size: small;
+    color: rgb(180, 180, 180);
 }

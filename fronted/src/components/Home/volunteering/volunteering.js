@@ -2,13 +2,18 @@ import { UilArrowRight } from "@iconscout/react-unicons";
 
 import style from "./volunteering.module.css";
 import Button from "../../UI/Button";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Volunteering = () => {
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
+  
   return (
     <section>
       <div className={style.volunteering}>
         <div>
-          <h2 className={style["volunteering-title"]} id="volunteering">
+          <h2 className={theme ? style["volunteering-title-dark"] : style["volunteering-title"]} id="volunteering">
             Volunteering
           </h2>
           <br />
