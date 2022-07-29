@@ -36,6 +36,7 @@
 .image {
   border-radius: .5rem;
   margin-left: 30px;
+  box-shadow: 5px 5px 8px rgb(128, 128, 128);
 }
 
 .details {
