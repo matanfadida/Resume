@@ -9,7 +9,7 @@ const MainNavigation = () => {
 
   const conTheme = useContext(ThemeContext);
   const [navbar, setNavbar] = useState(true);
-  const themeState = conTheme.theme === 'dark';
+  const theme = conTheme.theme === 'dark';
   // const [showIconMain, setShowIconMain] = useState(false);
   console.log(conTheme)
 
@@ -29,30 +29,30 @@ const MainNavigation = () => {
 
   return (
     <header>
-      <nav className={navbar ? style.nav : style["nav-move"]} style={themeState ? {backgroundColor:'rgb(18, 17, 17)', color:"darkorange"} : null}>
+      <nav className={navbar ? style.nav : style["nav-move"]} style={theme ? {backgroundColor:'rgb(18, 17, 17)', color:"darkorange"} : null}>
         <h2 className={style.h2}>Fadida Matan</h2>
         <ul  className={style.ul}>
           <li className={style.li}>
-            <a href="#top" className={themeState ? style["a-dark"] : style.a}>
+            <a href="#top" className={theme ? style["a-dark"] : style.a}>
               Home
             </a>
           </li>
           <li className={style.li}>
-            <a href="#About" className={themeState ? style["a-dark"] : style.a}>
+            <a href="#About" className={theme ? style["a-dark"] : style.a}>
               About
             </a>
           </li>
           <li className={style.li}>
-            <a href="#Skills" className={themeState ? style["a-dark"] : style.a}>
+            <a href="#Skills" className={theme ? style["a-dark"] : style.a}>
               Skills
             </a>
           </li>
           <li className={style.li}>
-            <a href="#Contact" className={themeState ? style["a-dark"] : style.a}>
+            <a href="#Contact" className={theme ? style["a-dark"] : style.a}>
               Contact
             </a>
           </li>
-          <i className={style.icon}><UilMoon onClick={conTheme.toggleThemeHandler}/></i>
+          {theme ? <i className={style.icon}><UilSun onClick={conTheme.toggleThemeHandler}/></i> : <i className={style.icon}><UilMoon onClick={conTheme.toggleThemeHandler}/></i>}
         </ul>
       </nav>
     </header>
