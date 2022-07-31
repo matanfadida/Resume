@@ -54,7 +54,7 @@
   font-weight: bold;
 }
 
-.a-dark:hover {
+.active-dark,.a-dark:hover {
   color: darkorange;
   text-decoration: none;
   font-weight: bold;

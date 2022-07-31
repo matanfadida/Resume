@@ -10,7 +10,6 @@ const Details = () => {
 
   const useCat = useContext(ThemeContext);
   const theme = useCat.theme === 'dark';
-  console.log(theme)
   return (
     <div className={style.center}>
       <section className={style.section}>

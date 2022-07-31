@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import HomePage from "./components/Home/homepage";
 import MainNavigation from "./components/navigation/main-navigation";
+import { BrowserRouter } from "react-router-dom";
+
 
 export const ThemeContext = createContext(null);
 
@@ -10,11 +12,13 @@ function App() {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
   return (
-    <ThemeContext.Provider value={{theme, setTheme, toggleThemeHandler}}>
-      <div>
-        <MainNavigation />
-        <HomePage />
-      </div>
+    <ThemeContext.Provider value={{ theme, setTheme, toggleThemeHandler }}>
+      <BrowserRouter>
+        <div>
+          <MainNavigation />
+          <HomePage />
+        </div>
+      </BrowserRouter>
     </ThemeContext.Provider>
   );
 }

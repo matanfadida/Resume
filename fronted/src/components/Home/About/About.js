@@ -50,7 +50,7 @@ const About = () => {
           Downlond My CV <UilDownloadAlt />
         </a>
       </Button>
-      <a href="#" className={theme ? stylesDark : styles}><UilArrowUp/></a>
+      <a href="#top" className={theme ? stylesDark : styles}><UilArrowUp/></a>
     </section>
   );
 };

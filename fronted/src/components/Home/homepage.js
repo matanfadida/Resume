@@ -11,17 +11,23 @@ import Volunteering from "./volunteering/volunteering";
 const HomePage = () => {
   const ConTex = useContext(ThemeContext);
   const theme = ConTex.theme;
-  console.log('asdas', theme)
+
   return (
-    <div style={theme === 'light' ? {backgroundColor: 'white'} : {backgroundColor:"#212121"}}>
-      <br/>
+    <div
+      style={
+        theme === "light"
+          ? { backgroundColor: "white" }
+          : { backgroundColor: "#212121" }
+      }
+    >
+      <br />
       <Details />
       <About />
       <Skills />
       <Qualification />
-      <Volunteering/>
-      <Contact/>
-      <Footer/>
+      <Volunteering />
+      <Contact />
+      <Footer />
     </div>
   );
 };
