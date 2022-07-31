@@ -7,10 +7,14 @@
   display: inline-flex;
 }
 
+.div {
+  margin-top: 60px;
+  display: inline-flex;
+}
+
 .icon-div {
-  padding: 40px 30px 10px 10px;
+  margin: 40px 30px 100px 10px;
   display: grid;
-  grid-template-columns: max-content;
 }
 
 .icon {

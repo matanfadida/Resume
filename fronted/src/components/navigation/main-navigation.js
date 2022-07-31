@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
+import { HashLink as NavLink } from 'react-router-hash-link';
+
 import style from "./main-navigation.module.css";
-// import { UilAlignJustify } from '@iconscout/react-unicons';
+
 import { UilMoon } from "@iconscout/react-unicons";
 import { UilSun } from "@iconscout/react-unicons";
 import { ThemeContext } from "../../App";
-// import { NavLink } from 'react-router-dom';
-import { HashLink as NavLink } from 'react-router-hash-link';
 
 const MainNavigation = () => {
   const conTheme = useContext(ThemeContext);
@@ -15,8 +15,6 @@ const MainNavigation = () => {
   const [activeSkills, setActiveSkills] = useState(false);
   const [activeContact, setActiveContact] = useState(false);
   const [activeHome, setActiveHome] = useState(false);
-
-  // const [showIconMain, setShowIconMain] = useState(false);
 
   const themeStatus = theme ? `${style["a-dark"]} ${style["active-dark"]}` : `${style.a} ${style.active} `
 
