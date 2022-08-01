@@ -3,7 +3,6 @@ import HomePage from "./components/Home/homepage";
 import MainNavigation from "./components/navigation/main-navigation";
 import { BrowserRouter } from "react-router-dom";
 
-
 export const ThemeContext = createContext(null);
 
 function App() {
