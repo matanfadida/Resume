@@ -28,7 +28,7 @@ const Details = () => {
             </a>
           </div>
           <div className={style.details}>
-            <h1 className={theme ? style.dark : ""}>I,m Matan Fadida</h1>
+            <h1 className={theme ? style.dark : ""}>I'm Matan Fadida</h1>
             <p className={style.p}>
               this is my offcial resume website to showes all Details about me
             </p>

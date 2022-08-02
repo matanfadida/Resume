@@ -11,6 +11,8 @@ app.use(express.static(path.join(__dirname, "/public")))
 
 app.use(bodyParser.json(), urlencoded({ extended: false }));
 
+const port = process.env.PORT || 4000;
+
 app.post("/sendEmail", (req, res) => {
   const body = req.body;
   const transporter = nodemailer.createTransport({
@@ -41,4 +43,4 @@ app.post("/sendEmail", (req, res) => {
   
 });
 
-app.listen(4000);
+app.listen(port);
