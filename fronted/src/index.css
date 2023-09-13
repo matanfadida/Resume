@@ -1,4 +1,8 @@
 @import url(//db.onlinewebfonts.com/c/00561b492d88a5287a5def1e83a34882?family=Gumela);
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Gumela", sans-serif;
@@ -15,9 +19,16 @@ a {
   text-decoration: none;
   color: antiquewhite;
 }
-
+ul{
+  margin: 0;
+  padding: 0;
+}
 p {
   color: rgb(180, 180, 180);
+}
+
+.display_none{
+  display: none;
 }
 
 ::-webkit-scrollbar {

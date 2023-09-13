@@ -8,17 +8,20 @@ import Skill from "./skill";
 import style from "./skills.module.css";
 
 const backendArray = [
-  { name: "Node-Js", percent: 70 },
-  { name: "Next-Js", percent: 90 },
+  { name: "Node-Js", text: "Advanced level - Experienced in building robust server-side applications using Node.js and Express. Proficient in developing RESTful APIs, and middleware, and handling routing efficiently. Skilled in optimizing server performance and ensuring scalability" },
   { name: "MongoDB", percent: 70 },
   { name: "SQL", percent: 65 },
-];
-const frontedArray = [
   { name: "Html", percent: 80 },
   { name: "Css", percent: 70 },
   { name: "JavaScript", percent: 90 },
   { name: "React-Hooks", percent: 90 },
 ];
+// const frontedArray = [
+//   { name: "Html", percent: 80 },
+//   { name: "Css", percent: 70 },
+//   { name: "JavaScript", percent: 90 },
+//   { name: "React-Hooks", percent: 90 },
+// ];
 
 const Skills = () => {
   const [toggleFronted, setToggelFronted] = useState(false);
@@ -59,7 +62,7 @@ const Skills = () => {
         <span className={style["skills-subtitle"]}>My tecnical level</span>
       </div>
       <div>
-        <div>
+        {/* <div>
           <div className={style.header}>
             <i className={theme ? style["icon-dark"] : style.icon}>
               <UilBracketsCurly />
@@ -80,14 +83,14 @@ const Skills = () => {
               </div>
             )}
           </div>
-        </div>
+        </div> */}
 
         <div>
           <div className={style.header}>
             <i className={theme ? style["icon-dark"] : style.icon}>
               <UilServerConnection />
             </i>
-            <h1 id="Qualification" style={theme ? {color:'darkorange'} : {color:'black'}}>Beckend Development</h1>
+            <h1 id="Qualification" style={theme ? {color:'darkorange'} : {color:'black'}}>Programming Languages and Professional Knowledge</h1>
             <button onClick={toggleBeckendHandler} className={theme ? style["icon-dark"] : style.icon}>
               <UilAngleDown />
             </button>
