@@ -1,11 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { HashLink as NavLink } from "react-router-hash-link";
-
 import style from "./main-navigation.module.css";
 
-import { UilMoon } from "@iconscout/react-unicons";
-import { UilSun } from "@iconscout/react-unicons";
-import { UilBars } from "@iconscout/react-unicons";
+import { UilMoon, UilMultiply, UilSun, UilBars } from "@iconscout/react-unicons";
 import { ThemeContext } from "../../App";
 
 const MainNavigation = () => {
@@ -16,6 +13,9 @@ const MainNavigation = () => {
   const [activeSkills, setActiveSkills] = useState(false);
   const [activeContact, setActiveContact] = useState(false);
   const [activeHome, setActiveHome] = useState(false);
+  const [showSideManu, setShowSideManu] = useState(false);
+  const ulMovile = useRef();
+  const ulMovileDiv = useRef();
 
   const themeStatus = theme
     ? `${style["a-dark"]} ${style["active-dark"]}`
@@ -61,92 +61,112 @@ const MainNavigation = () => {
   useEffect(() => {
     navBarState();
     window.addEventListener("scroll", navBarState);
+    window.addEventListener("touchmove", navBarState);
   });
+
+
+  const OpenManuSideHandler = (e) => {
+    setShowSideManu(true);
+    ulMovile.current.classList.remove('display_none');
+  }
+
+  const CloseManuSideHandler = () => {
+    setShowSideManu(false);
+    setTimeout(() => {
+      ulMovile.current.classList.add('display_none');
+    },[2000])
+  }
+
+  var styleDark = theme
+  ? { backgroundColor: "rgb(18, 17, 17)", color: "darkorange" }
+  : null
 
   return (
     <header
-    className={navbar ? style["nav"] : style["nav-move"]}
-      style={
-        theme
-          ? { backgroundColor: "rgb(18, 17, 17)", color: "darkorange" }
-          : null
-      }
+      className={navbar ? style["nav"] : style["nav-move"]}
+      style={styleDark}
     >
       <div>
         <ul className={style["ul-first"]}>
-          <li><h2 className={style.h2}>Matan Fadida</h2></li>
           <li className={style.phone}>
-            <UilBars/>
-            <div className={style["manu-side"]}>
-            <ul>
-              <li>
-                <NavLink
-                  to="#top"
-                  smooth
-                  className={
-                    activeHome ? themeStatus : theme ? style["a-dark"] : style.a
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#About"
-                  smooth
-                  className={
-                    activeAbout
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#Skills"
-                  smooth
-                  className={
-                    activeSkills
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  Skills
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#Contact"
-                  smooth
-                  className={
-                    activeContact
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  Contact
-                </NavLink>
-              </li>
-              <li>
-              {theme ? (
-            <i>
-              <UilSun onClick={conTheme.toggleThemeHandler} />
-            </i>
-          ) : (
-            <i>
-              <UilMoon onClick={conTheme.toggleThemeHandler} />
-            </i>
-          )}
-              </li>
-            </ul>
+            <UilBars onClick={OpenManuSideHandler} />
+            <div ref={ulMovileDiv} className={showSideManu ? `${style["manu-side-show"]}` : `${style["manu-side-hidden"]}`} style={styleDark}>
+              <ul ref={ulMovile} className={`${style["ul-menu-side"]} display_none`} >
+                <li className={style.close}>
+                  <UilMultiply onClick={CloseManuSideHandler}/>
+                </li>
+                <li>
+                  <NavLink
+                    to="#top"
+                    smooth
+                    className={
+                      activeHome
+                        ? themeStatus
+                        : theme
+                        ? style["a-dark"]
+                        : style.a
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="#About"
+                    smooth
+                    className={
+                      activeAbout
+                        ? themeStatus
+                        : theme
+                        ? style["a-dark"]
+                        : style.a
+                    }
+                  >
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="#Skills"
+                    smooth
+                    className={
+                      activeSkills
+                        ? themeStatus
+                        : theme
+                        ? style["a-dark"]
+                        : style.a
+                    }
+                  >
+                    Skills
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="#Contact"
+                    smooth
+                    className={
+                      activeContact
+                        ? themeStatus
+                        : theme
+                        ? style["a-dark"]
+                        : style.a
+                    }
+                  >
+                    Contact
+                  </NavLink>
+                </li>
+                <li>
+                  {theme ? (
+                    <i>
+                      <UilSun onClick={conTheme.toggleThemeHandler} />
+                    </i>
+                  ) : (
+                    <i>
+                      <UilMoon onClick={conTheme.toggleThemeHandler} />
+                    </i>
+                  )}
+                </li>
+              </ul>
             </div>
           </li>
           <li className={style["full-screen"]}>
@@ -208,17 +228,20 @@ const MainNavigation = () => {
                 </NavLink>
               </li>
               <li>
-              {theme ? (
-            <i>
-              <UilSun onClick={conTheme.toggleThemeHandler} />
-            </i>
-          ) : (
-            <i>
-              <UilMoon onClick={conTheme.toggleThemeHandler} />
-            </i>
-          )}
+                {theme ? (
+                  <i>
+                    <UilSun onClick={conTheme.toggleThemeHandler} />
+                  </i>
+                ) : (
+                  <i>
+                    <UilMoon onClick={conTheme.toggleThemeHandler} />
+                  </i>
+                )}
               </li>
             </ul>
+          </li>
+          <li>
+            <h2 className={style.h2}>Matan Fadida</h2>
           </li>
         </ul>
       </div>

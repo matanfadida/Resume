@@ -21,13 +21,13 @@ const HomePage = () => {
       }
     >
       <br />
-      <Details />
+      {/* <Details /> */}
       <About />
       <Skills />
-      <Qualification />
-      <Volunteering />
-      <Contact />
-      <Footer />
+      {/* <Qualification /> */}
+      {/* <Volunteering /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

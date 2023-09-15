@@ -79,14 +79,78 @@
 .phone{
   display: none;
 }
+
 .full-screen{
   display: block;
 }
+
 @media only screen and (max-width: 600px) {
   .phone{
     display: block;
+    margin-left: 20px;
+  }
+  .manu-side-show{
+    background-color: SlateBlue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-bottom-right-radius: 80px;
+    animation-name: sideOpen;
+    animation-duration: 2s;
+  }
+  .manu-side-hidden{
+    background-color: SlateBlue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-bottom-right-radius: 80px;
+    animation-name: sideClose;
+    animation-duration: 2s;
+  }
+  .close{
+    position: absolute;
+    top:0;
+    right: 0;
+  }
+  .h2{
+    margin-right: 20px;
+  }
+  .ul-menu-side{
+    list-style: none;
+    padding-right: 95px;
+  }
+  .ul-menu-side > li {
+    margin: 20px 15px;
+  }
+  .active, .a:hover {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
   }
   .full-screen{
     display: none;
+  }
+}
+@keyframes sideOpen {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sideClose {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20%);
   }
 }
