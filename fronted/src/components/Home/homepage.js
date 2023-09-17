@@ -7,6 +7,7 @@ import Footer from "./footer/footer";
 import Qualification from "./qualification/qualification";
 import Skills from "./Skills/skills";
 import Volunteering from "./volunteering/volunteering";
+import Work from "./work/work";
 
 const HomePage = () => {
   const ConTex = useContext(ThemeContext);
@@ -21,8 +22,9 @@ const HomePage = () => {
       }
     >
       <br />
-      {/* <Details /> */}
+      <Details />
       <About />
+      <Work/>
       <Skills />
       {/* <Qualification /> */}
       {/* <Volunteering /> */}

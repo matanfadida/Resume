@@ -16,44 +16,11 @@
   color: darkorange;
 }
 
-.bar {
-  background-color: rgba(102, 51, 153, 0.138);
-  border-radius: 10px;
+.li-style{
+  overflow-wrap: break-word;
 }
-.precentags {
-  height: 10px;
-  border-radius: 0.25rem;
-  display: block;
-  background-color: rebeccapurple;
-}
-.precentags-dark {
-  height: 10px;
-  border-radius: 0.25rem;
-  display: block;
-  background-color: darkorange;
-}
-.Html {
-  width: 80%;
-}
-.Css {
-  width: 70%;
-}
-.JavaScript {
-  width: 90%;
-}
-.React-Hooks {
-  width: 90%;
-}
-
-.Node-Js {
-  width: 70%;
-}
-.Next-Js {
-  width: 90%;
-}
-.MongoDB {
-  width: 70%;
-}
-.SQL {
-  width: 65%;
+.li-style > p{
+  position: relative;
+  text-align: start;
+  margin-left: 50px;
 }

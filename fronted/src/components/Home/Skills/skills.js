@@ -8,40 +8,19 @@ import Skill from "./skill";
 import style from "./skills.module.css";
 
 const backendArray = [
-  { name: "Node-Js", text: "Advanced level - Experienced in building robust server-side applications using Node.js and Express. Proficient in developing RESTful APIs, and middleware, and handling routing efficiently. Skilled in optimizing server performance and ensuring scalability" },
-  { name: "MongoDB", percent: 70 },
-  { name: "SQL", percent: 65 },
-  { name: "Html", percent: 80 },
-  { name: "Css", percent: 70 },
-  { name: "JavaScript", percent: 90 },
-  { name: "React-Hooks", percent: 90 },
+  { name: "Node-Js", text: "Experienced in building robust server-side applications using Node.js and Express. Proficient in developing RESTful APIs, and middleware, and handling routing efficiently. Skilled in optimizing server performance and ensuring scalability" },
+  { name: "React-Hooks", text: "develop modern web applications. Proficient in state management, component lifecycle, building interactive UIs, and making GET and POST requests to APIs for data interaction. Skilled in optimizing performance for enhanced user experiences, and adept at MongoDB for efficient data storage and retrieval." },
+  { name: "C#, .Net Core", text: "OOP, development of multi-threaded applications while implementing synchronization principles and working with encryption. Use of Design Patterns, Skilled in SQL Server for efficient database management and integration within C# applications." },
+  { name: "JavaScript - JQuery", text: "Proficient in creating interactive web applications, extensive experience in server-side scripting, and DOM manipulation. Skilled in building responsive and dynamic user interfaces." },
+  { name: "Python", text: "Work with advanced librarieslike pyspark, pandas, nltk, graphframes. Building a data retrieval engine that includes a large corpus of 6 million Wikipedia documents, using natural language processing (NLP) techniques andGCP." },
 ];
-// const frontedArray = [
-//   { name: "Html", percent: 80 },
-//   { name: "Css", percent: 70 },
-//   { name: "JavaScript", percent: 90 },
-//   { name: "React-Hooks", percent: 90 },
-// ];
 
 const Skills = () => {
-  const [toggleFronted, setToggelFronted] = useState(false);
   const [toggleBackend, setToggelBackend] = useState(false);
-  const [showListFronted, setShowListFronted] = useState(false);
   const [showListBackend, setShowListBackend] = useState(false);
   
   const conTheme = useContext(ThemeContext);
   const theme = conTheme.theme === "dark";
-
-  const toggleFrontedHandler = () => {
-    setToggelFronted(!toggleFronted);
-    if (toggleFronted) {
-      setTimeout(() => {
-        setShowListFronted(!showListFronted);
-      }, 3000);
-    } else {
-      setShowListFronted(true);
-    }
-  };
 
   const toggleBeckendHandler = () => {
     setToggelBackend(!toggleBackend);
@@ -62,29 +41,6 @@ const Skills = () => {
         <span className={style["skills-subtitle"]}>My tecnical level</span>
       </div>
       <div>
-        {/* <div>
-          <div className={style.header}>
-            <i className={theme ? style["icon-dark"] : style.icon}>
-              <UilBracketsCurly />
-            </i>
-            <h1 style={theme ? {color:'darkorange'} : {color:'black'}}>Fronted Development</h1>
-            <button onClick={toggleFrontedHandler} className={theme ? style["icon-dark"] : style.icon}>
-              <UilAngleDown />
-            </button>
-          </div>
-          <div
-            className={toggleFronted ? style["list-open"] : style["list-close"]}
-          >
-            {showListFronted && (
-              <div>
-                {frontedArray.map((item, index) => (
-                  <Skill key={index} name={item.name} percent={item.percent} />
-                ))}
-              </div>
-            )}
-          </div>
-        </div> */}
-
         <div>
           <div className={style.header}>
             <i className={theme ? style["icon-dark"] : style.icon}>
@@ -100,11 +56,11 @@ const Skills = () => {
             className={toggleBackend ? style["list-open"] : style["list-close"]}
           >
             {showListBackend && (
-              <div>
+              <ul className={style.ul}>
                 {backendArray.map((item, index) => (
-                  <Skill key={index} name={item.name} percent={item.percent} />
+                  <Skill key={index} name={item.name} text={item.text} />
                 ))}
-              </div>
+              </ul>
             )}
           </div>
         </div>

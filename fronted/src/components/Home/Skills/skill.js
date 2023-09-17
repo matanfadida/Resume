@@ -7,12 +7,12 @@ const Skill = (props) => {
   const theme = conTheme.theme === "dark";
   const { name, text } = props;
   return (
-    <div>
+    <li className={style["li-style"]}>
       <h3 className={theme ? style["skills-name-dark"] : style["skills-name"]}>
         {name}
       </h3>
-      <p>asdasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddas</p>
-    </div>
+      <p>{text}</p>
+    </li>
   );
 };
 

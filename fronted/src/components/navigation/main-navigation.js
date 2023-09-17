@@ -74,7 +74,7 @@ const MainNavigation = () => {
     setShowSideManu(false);
     setTimeout(() => {
       ulMovile.current.classList.add('display_none');
-    },[2000])
+    },[1900])
   }
 
   var styleDark = theme

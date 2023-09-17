@@ -1,0 +1,23 @@
+.section {
+    margin-top: 100px;
+}
+
+.ul-first{
+    padding-left: 2.7rem;
+    list-style: none;
+}
+
+.ul-first > li{
+    text-align: start;
+}
+
+.ul-first > ul > li{
+    margin-left: 50px;
+    text-align: start;
+    list-style-type: disc;
+    color: rgb(180, 180, 180);
+}
+
+.job{
+    color: rebeccapurple;
+}
