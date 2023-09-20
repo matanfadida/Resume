@@ -26,9 +26,9 @@ const HomePage = () => {
       <About />
       <Work/>
       <Skills />
-      {/* <Qualification /> */}
-      {/* <Volunteering /> */}
-      {/* <Contact /> */}
+      <Qualification />
+      <Volunteering />
+      <Contact />
       {/* <Footer /> */}
     </div>
   );

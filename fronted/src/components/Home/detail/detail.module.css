@@ -50,3 +50,15 @@
 .dark {
   color: darkorange;
 }
+
+@media only screen and (max-width: 600px) {
+  .section{
+    display: block;
+  }
+  .image{
+    margin-left: 0;
+  }
+  .div{
+    margin-bottom: 20px;
+  }
+}

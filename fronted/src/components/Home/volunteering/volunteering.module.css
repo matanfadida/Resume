@@ -1,5 +1,28 @@
-.volunteering {
-  padding-bottom: 100px;
+.ul-first {
+  padding-left: 2.7rem;
+  list-style: none;
+}
+
+.ul-first > li {
+  text-align: start;
+}
+
+.ul-first > ul > li {
+  margin-left: 50px;
+  text-align: start;
+  list-style-type: disc;
+  color: rgb(180, 180, 180);
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+}
+
+.div_text {
+  margin-left: 30px;
 }
 
 .volunteering-title {
@@ -15,28 +38,27 @@
   color: rgb(180, 180, 180);
 }
 
-.image-text {
-  display: inline-flex;
-  padding: 50px;
-}
-
 .imgae {
   border-radius: 30px;
   box-shadow: 5px 5px 8px rgb(128, 128, 128);
 }
 
-.text {
-  margin-top: 100px;
-  text-align-last: center;
-  width: 400px;
-  word-break: keep-all;
-  padding-left: 40px;
-}
-
 .icon {
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
-.div-button{
-    display:inline-block;
+@media only screen and (max-width: 900px) {
+  .div {
+    display: block !important;
+    margin: 20px 0px 0px 0px;
+  }
+  .button-margin {
+    margin-top: 20px;
+  }
+  .imgae{
+    width: 300px;
+  }
+  .ul-first {
+    padding-left: 0px;
+  }
 }

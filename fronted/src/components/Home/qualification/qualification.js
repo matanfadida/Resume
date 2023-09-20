@@ -25,7 +25,7 @@ const Qualification = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 className={theme ? style["qualification-title-dark"] : style["qualification-title"]}>qualification</h2>
+        <h2 className={theme ? style["qualification-title-dark"] : style["qualification-title"]}>Qualification</h2>
         <br/>
         <span className={style["qualification-subtitle"]}>My prsonal journey</span>
       </div>
@@ -56,7 +56,7 @@ const Qualification = () => {
                     <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
-                    <i className={style["date-color"]}>10/2019 - Now</i>
+                    <i className={style["date-color"]}>10/2019 - 10/23</i>
                   </div>
                 </div>
               </SwiperSlide>
@@ -92,7 +92,7 @@ const Qualification = () => {
                     <i className={theme ? style["icon-color-dark"] : style["icon-color"]}>
                       <UilCalendarAlt />
                     </i>
-                    <i className={style["date-color"]}>07/2022 - Now</i>
+                    <i className={style["date-color"]}>07/2022</i>
                   </div>
                 </div>
               </SwiperSlide>

@@ -30,7 +30,9 @@ p {
 .display_none{
   display: none;
 }
-
+section{
+  margin-top: 100px;
+}
 ::-webkit-scrollbar {
   width: 0.60rem;
   background-color: rgb(237, 237, 237);

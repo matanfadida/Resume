@@ -77,7 +77,7 @@ const Contact = () => {
           Contact Me
         </h2>
         <br />
-        <span className={style["contact-subtitle"]}>Get in touch</span>
+        <span className={style["contact-subtitle"]}>be in touch</span>
       </div>
       <br />
       <div className={style.continer}>
