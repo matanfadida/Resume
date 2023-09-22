@@ -3,16 +3,13 @@
 }
 
 .contact {
-    background-color:rgb(180, 180, 180);
+  border: 2px solid SlateBlue;
     border-radius: 0.5rem;
     padding: 0.75rem 1rem 0.25rem;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
 .contact-input {
     width: 100%;
-    background-color:rgb(180, 180, 180);
     color: rgb(114, 98, 98);
     border: none;
     outline: none;
@@ -25,4 +22,42 @@
 
 .div-button{
     margin-top: 30px;
+}
+
+
+.ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.ul > li {
+    border: 2px solid SlateBlue;
+    border-radius: 0.5rem;
+    padding: 8px;
+    display: grid;
+}
+
+.ul > li > input{
+    border: none;
+    outline: none;
+}
+
+.div{
+    display: grid;
+    justify-content: center;
+}
+
+.div_title_email{
+    margin: 10px auto;
+}
+
+@media only screen and (max-width: 520px) {
+    .ul > li {
+        display: block;
+    }
+    .div{
+        margin: auto 20px;
+    }
 }

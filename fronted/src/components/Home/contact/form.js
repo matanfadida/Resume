@@ -1,31 +1,32 @@
 import Button from "../../UI/Button";
 
-import style from './form.module.css';
+import style from "./form.module.css";
 
 import { UilNavigator } from "@iconscout/react-unicons";
 
 const Form = (props) => {
-    const {submitHandler, emailHandler, titleHandler, messageHandler, Loding} = props
+  const { submitHandler, emailHandler, titleHandler, messageHandler, Loding } =
+    props;
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <div className={style["email-title"]}>
-          <div className={style.contact}>
-            <label className={style.contact}>You'r Mail</label>
-            <input
-              className={style["contact-input"]}
-              type="email"
-              onChange={emailHandler}
-            />
-          </div>
-          <div className={style.contact}>
-            <label type="text">Title</label>
-            <input
-              className={style["contact-input"]}
-              type="text"
-              onChange={titleHandler}
-            />
-          </div>
+      <div className={style.div}>
+        <div className={style["div_title_email"]}>
+          <ul className={style.ul}>
+            <li>
+              <label>You'r Email</label>
+              <input
+                type="email"
+                onChange={emailHandler}
+              />
+            </li>
+            <li>
+              <label>Title</label>
+              <input
+                type="text"
+                onChange={titleHandler}
+              />
+            </li>
+          </ul>
         </div>
         <div className={style.contact}>
           <label>Message</label>

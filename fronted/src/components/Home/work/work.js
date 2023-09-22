@@ -4,7 +4,7 @@ const Work = () => {
   return (
     <section className={style.section}>
       <div>
-        <h1>Work Experience</h1>
+        <h1 id="Skills">Work Experience</h1>
         <ul className={style["ul-first"]}>
           <li><h3 className={style.job}>Full Stack Developer | Qualish</h3></li>
           <ul>

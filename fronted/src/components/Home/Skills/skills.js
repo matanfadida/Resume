@@ -1,4 +1,3 @@
-import { UilBracketsCurly } from "@iconscout/react-unicons";
 import { UilAngleDown } from "@iconscout/react-unicons";
 import { UilServerConnection } from "@iconscout/react-unicons";
 import { useContext, useState } from "react";

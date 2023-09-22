@@ -42,7 +42,7 @@ delivering projects on time and within budget. Skilled in collaborative teamwork
 excellence in software development and continually exploring emerging technologies to drive cutting-edge solutions.
       </p>
       <Button>
-        <a download="" href="Matan_Fadida_CV.pdf" id="Skills">
+        <a download="" href="Matan_Fadida_CV.pdf" id="Work">
           Downlond My CV <UilDownloadAlt />
         </a>
       </Button>

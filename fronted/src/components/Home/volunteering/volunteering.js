@@ -18,7 +18,7 @@ const Volunteering = () => {
               ? style["volunteering-title-dark"]
               : style["volunteering-title"]
           }
-          id="volunteering"
+          id="Social Activities"
         >
           Social Activities
         </h2>

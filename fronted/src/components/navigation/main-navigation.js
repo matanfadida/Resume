@@ -1,8 +1,8 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { HashLink as NavLink } from "react-router-hash-link";
 import style from "./main-navigation.module.css";
+import LiNav from "./li-navigation";
 
-import { UilMoon, UilMultiply, UilSun, UilBars } from "@iconscout/react-unicons";
+import { UilMultiply, UilBars } from "@iconscout/react-unicons";
 import { ThemeContext } from "../../App";
 
 const MainNavigation = () => {
@@ -10,6 +10,7 @@ const MainNavigation = () => {
   const [navbar, setNavbar] = useState(true);
   const theme = conTheme.theme === "dark";
   const [activeAbout, setActiveAbout] = useState(false);
+  const [activeWork, setActiveWork] = useState(false);
   const [activeSkills, setActiveSkills] = useState(false);
   const [activeContact, setActiveContact] = useState(false);
   const [activeHome, setActiveHome] = useState(false);
@@ -34,27 +35,29 @@ const MainNavigation = () => {
     window.addEventListener("scroll", changeBackground);
   });
 
+  const UpdateLocation = (location) => {
+      setActiveAbout(location === 'about');
+      setActiveHome(location === 'home');
+      setActiveSkills(location === 'skills');
+      setActiveWork(location === 'work');
+      setActiveContact(location === 'contect')
+  }
   const navBarState = () => {
+    console.log('ss',window.scrollY);
     if (window.scrollY > 118 && window.scrollY < 577) {
-      setActiveAbout(true);
-      setActiveHome(false);
-      setActiveSkills(false);
+      UpdateLocation('about');
     }
-    if (window.scrollY > 577 && window.scrollY < 1420) {
-      setActiveSkills(true);
-      setActiveAbout(false);
-      setActiveContact(false);
+    if (window.scrollY > 577 && window.scrollY < 900) {
+      UpdateLocation('work');
     }
-    if (window.scrollY > 1420 && window.scrollY < 1630) {
-      setActiveContact(true);
-      setActiveSkills(false);
-      setActiveAbout(false);
+    if (window.scrollY > 900 && window.scrollY < 1990) {
+      UpdateLocation('skills');
+    }
+    if (window.scrollY > 2990 && window.scrollY < 3600) {
+      UpdateLocation('contect');
     }
     if (window.scrollY < 118) {
-      setActiveHome(true);
-      setActiveAbout(false);
-      setActiveContact(false);
-      setActiveSkills(false);
+      UpdateLocation('home');
     }
   };
 
@@ -64,22 +67,21 @@ const MainNavigation = () => {
     window.addEventListener("touchmove", navBarState);
   });
 
-
   const OpenManuSideHandler = (e) => {
     setShowSideManu(true);
-    ulMovile.current.classList.remove('display_none');
-  }
+    ulMovile.current.classList.remove("display_none");
+  };
 
   const CloseManuSideHandler = () => {
     setShowSideManu(false);
     setTimeout(() => {
-      ulMovile.current.classList.add('display_none');
-    },[1900])
-  }
+      ulMovile.current.classList.add("display_none");
+    }, [1900]);
+  };
 
   var styleDark = theme
-  ? { backgroundColor: "rgb(18, 17, 17)", color: "darkorange" }
-  : null
+    ? { backgroundColor: "rgb(18, 17, 17)", color: "darkorange" }
+    : null;
 
   return (
     <header
@@ -90,154 +92,47 @@ const MainNavigation = () => {
         <ul className={style["ul-first"]}>
           <li className={style.phone}>
             <UilBars onClick={OpenManuSideHandler} />
-            <div ref={ulMovileDiv} className={showSideManu ? `${style["manu-side-show"]}` : `${style["manu-side-hidden"]}`} style={styleDark}>
-              <ul ref={ulMovile} className={`${style["ul-menu-side"]} display_none`} >
+            <div
+              ref={ulMovileDiv}
+              className={
+                showSideManu
+                  ? `${style["manu-side-show"]}`
+                  : `${style["manu-side-hidden"]}`
+              }
+              style={styleDark}
+            >
+              <ul
+                ref={ulMovile}
+                className={`${style["ul-menu-side"]} display_none`}
+              >
                 <li className={style.close}>
-                  <UilMultiply onClick={CloseManuSideHandler}/>
+                  <UilMultiply onClick={CloseManuSideHandler} />
                 </li>
-                <li>
-                  <NavLink
-                    to="#top"
-                    smooth
-                    className={
-                      activeHome
-                        ? themeStatus
-                        : theme
-                        ? style["a-dark"]
-                        : style.a
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="#About"
-                    smooth
-                    className={
-                      activeAbout
-                        ? themeStatus
-                        : theme
-                        ? style["a-dark"]
-                        : style.a
-                    }
-                  >
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="#Skills"
-                    smooth
-                    className={
-                      activeSkills
-                        ? themeStatus
-                        : theme
-                        ? style["a-dark"]
-                        : style.a
-                    }
-                  >
-                    Skills
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="#Contact"
-                    smooth
-                    className={
-                      activeContact
-                        ? themeStatus
-                        : theme
-                        ? style["a-dark"]
-                        : style.a
-                    }
-                  >
-                    Contact
-                  </NavLink>
-                </li>
-                <li>
-                  {theme ? (
-                    <i>
-                      <UilSun onClick={conTheme.toggleThemeHandler} />
-                    </i>
-                  ) : (
-                    <i>
-                      <UilMoon onClick={conTheme.toggleThemeHandler} />
-                    </i>
-                  )}
-                </li>
+                <LiNav
+                  themeStatus={themeStatus}
+                  theme={theme}
+                  activeAbout={activeAbout}
+                  activeSkills={activeSkills}
+                  activeContact={activeContact}
+                  activeHome={activeHome}
+                  conTheme={conTheme}
+                  activeWork={activeWork}
+                />
               </ul>
             </div>
           </li>
           <li className={style["full-screen"]}>
             <ul className={style["ul-second"]}>
-              <li>
-                <NavLink
-                  to="#top"
-                  smooth
-                  className={
-                    activeHome ? themeStatus : theme ? style["a-dark"] : style.a
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#About"
-                  smooth
-                  className={
-                    activeAbout
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#Skills"
-                  smooth
-                  className={
-                    activeSkills
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  Skills
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="#Contact"
-                  smooth
-                  className={
-                    activeContact
-                      ? themeStatus
-                      : theme
-                      ? style["a-dark"]
-                      : style.a
-                  }
-                >
-                  Contact
-                </NavLink>
-              </li>
-              <li>
-                {theme ? (
-                  <i>
-                    <UilSun onClick={conTheme.toggleThemeHandler} />
-                  </i>
-                ) : (
-                  <i>
-                    <UilMoon onClick={conTheme.toggleThemeHandler} />
-                  </i>
-                )}
-              </li>
+            <LiNav
+                  themeStatus={themeStatus}
+                  theme={theme}
+                  activeAbout={activeAbout}
+                  activeSkills={activeSkills}
+                  activeContact={activeContact}
+                  activeHome={activeHome}
+                  conTheme={conTheme}
+                  activeWork={activeWork}
+                />
             </ul>
           </li>
           <li>
