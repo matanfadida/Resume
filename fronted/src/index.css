@@ -33,6 +33,7 @@ p {
 section{
   margin-top: 100px;
 }
+
 ::-webkit-scrollbar {
   width: 0.60rem;
   background-color: rgb(237, 237, 237);
@@ -43,13 +44,21 @@ section{
   background-color: rgb(173, 173, 173);
   border-radius: 0.5rem;
 }
-::-webkit-scrollbar-thumb:hover{
+.scroll-style-A::-webkit-scrollbar-thumb:hover{
   background-color: slateblue;
 }
-.swiper-pagination-bullet-active {
-  background-color: rgb(143, 20, 200) !important;
+.scroll-style-A .swiper-pagination-bullet-active {
+  background-color: slateblue !important;
 }
 .swiper-pagination .swiper-pagination-bullet {
   opacity: 1;
   background-color: rgb(135, 135, 135);
+}
+
+.scroll-style-B::-webkit-scrollbar-thumb:hover {
+  background-color: darkorange;
+}
+
+.scroll-style-B .swiper-pagination-bullet-active{
+  background-color: darkorange;
 }

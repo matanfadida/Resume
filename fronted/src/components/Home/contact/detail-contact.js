@@ -49,36 +49,6 @@ const DetailContact = () => {
           </div>
         </li>
       </ul>
-      {/* <div className={style.detail}>
-        <i className={theme ? style["icon-dark"] : style.icon}>
-          <UilMobileAndroid />
-        </i>
-        <div>
-          <h3 className={theme ? style["title-dark"] : style.title}>Phone</h3>
-          <br />
-          <span className={theme ? style["subtitle-dark"] : style.subtitle}>052-5305623</span>
-        </div>
-      </div> */}
-      {/* <div className={style.detail}>
-        <i className={theme ? style["icon-dark"] : style.icon}>
-          <UilEnvelopeAlt />
-        </i>
-        <div>
-          <h3 className={theme ? style["title-dark"] : style.title}>Email</h3>
-          <br />
-          <span className={theme ? style["subtitle-dark"] : style.subtitle}>matanfadida7@gmail.com</span>
-        </div>
-      </div>
-      <div className={style.detail}>
-        <i className={theme ? style["icon-dark"] : style.icon}>
-          <UilMapMarker />
-        </i>
-        <div>
-          <h3 className={theme ? style["title-dark"] : style.title}>Location</h3>
-          <br />
-          <span className={theme ? style["subtitle-dark"] : style.subtitle}>Be'er Sheva - Israel</span>
-        </div>
-      </div> */}
     </div>
   );
 };

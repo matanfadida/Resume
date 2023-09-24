@@ -8,6 +8,7 @@ import { ThemeContext } from "../../../App";
 const Volunteering = () => {
   const conTheme = useContext(ThemeContext);
   const theme = conTheme.theme === "dark";
+  const styleTitle = theme ? style["skills-title-dark"] : style["skills-title"];
 
   return (
     <section>
@@ -37,7 +38,7 @@ const Volunteering = () => {
           />
         <div className={style["div_text"]}>
           <ul className={style["ul-first"]}>
-            <li><h3 className={style.job}>Leadership program scholarship recipient | ISEF scholarship</h3></li>
+            <li><h3 className={styleTitle}>Leadership program scholarship recipient <span className={style["span-title"]}>|</span> ISEF scholarship</h3></li>
             <ul>
               <li>
                 The leadership program includes personal and professional development, acquisition of tools and skills, diverse training, and 
@@ -45,7 +46,7 @@ const Volunteering = () => {
                 the socio-geographic periphery.
               </li>
             </ul>
-            <li><h3 className={style.job}>Leadership program scholarship recipient | ISEF scholarship</h3></li>
+            <li><h3 className={styleTitle}>Leadership program scholarship recipient <span className={style["span-title"]}>|</span> ISEF scholarship</h3></li>
             <ul>
               <li>
                   Learning HTML and JS at a basic level for 15 students

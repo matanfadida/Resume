@@ -1,12 +1,17 @@
+import { useContext } from 'react';
 import style from './work.module.css';
+import { ThemeContext } from '../../../App';
 
 const Work = () => {
+  const conTheme = useContext(ThemeContext);
+  const theme = conTheme.theme === "dark";
+  const styleTitle = theme ? style["skills-title-dark"] : style["skills-title"];
   return (
     <section className={style.section}>
       <div>
-        <h1 id="Skills">Work Experience</h1>
+        <h2 id="Skills" className={styleTitle}>Work Experience</h2>
         <ul className={style["ul-first"]}>
-          <li><h3 className={style.job}>Full Stack Developer | Qualish</h3></li>
+          <li><h3 className={styleTitle}>Full Stack Developer <span className={style["span-title"]}>|</span> Qualish</h3></li>
           <ul>
             <li>
               Develop and maintain full-stack web applications using C#, .Net

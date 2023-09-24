@@ -88,6 +88,7 @@ const Contact = () => {
           titleHandler={titleHandler}
           messageHandler={messageHandler}
           Loding={Loding}
+          theme={theme}
         />
       </div>
       <PopUp

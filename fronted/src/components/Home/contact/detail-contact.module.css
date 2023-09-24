@@ -19,11 +19,7 @@
 .ul > li > div > h3 {
   margin: 0px;
 }
-/* 
-.detail {
-    display:inline-flex;
-    padding-right: 30px;
-} */
+
 .icon {
   margin-top: 8px;
   margin-right: 5px;
@@ -40,8 +36,6 @@
 }
 
 .title-dark {
-  margin-left: 0px;
-  display: inline;
   color: darkorange;
 }
 .subtitle-dark {

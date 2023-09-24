@@ -1,20 +1,27 @@
-
-.ul-first{
-    padding-left: 2.7rem;
-    list-style: none;
+.ul-first {
+  padding-left: 2.7rem;
+  list-style: none;
 }
 
-.ul-first > li{
-    text-align: start;
+.ul-first > li {
+  text-align: start;
 }
 
-.ul-first > ul > li{
-    margin-left: 50px;
-    text-align: start;
-    list-style-type: disc;
+.ul-first > ul > li {
+  margin-left: 50px;
+  text-align: start;
+  list-style-type: disc;
+  color: rgb(180, 180, 180);
+}
+
+.skills-title-dark {
+  color: darkorange;
+}
+
+.skills-title {
+  color: rebeccapurple;
+}
+
+.span-title{
     color: rgb(180, 180, 180);
-}
-
-.job{
-    color: rebeccapurple;
 }

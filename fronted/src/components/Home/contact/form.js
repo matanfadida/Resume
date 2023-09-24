@@ -5,13 +5,15 @@ import style from "./form.module.css";
 import { UilNavigator } from "@iconscout/react-unicons";
 
 const Form = (props) => {
-  const { submitHandler, emailHandler, titleHandler, messageHandler, Loding } =
+  const { submitHandler, emailHandler, titleHandler, messageHandler, Loding, theme } =
     props;
+const ulStyle = theme ? style["ul-dark"] : style.ul;
+
   return (
     <form onSubmit={submitHandler}>
       <div className={style.div}>
         <div className={style["div_title_email"]}>
-          <ul className={style.ul}>
+          <ul className={ulStyle}>
             <li>
               <label>You'r Email</label>
               <input
@@ -28,10 +30,10 @@ const Form = (props) => {
             </li>
           </ul>
         </div>
-        <div className={style.contact}>
+        <div className={theme ? style["contact-dark"]: style.contact}>
           <label>Message</label>
           <textarea
-            className={style["contact-input"]}
+            className={theme? style["contact-dark-input"] :style["contact-input"]}
             onChange={messageHandler}
             defaultChecked="10"
           />

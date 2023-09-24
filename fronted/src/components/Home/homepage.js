@@ -13,14 +13,19 @@ const HomePage = () => {
   const ConTex = useContext(ThemeContext);
   const theme = ConTex.theme;
 
+  if(theme === 'light'){
+    document.body.style.backgroundColor = 'white';
+    document.body.classList.add('scroll-style-A');
+    document.body.classList.remove('scroll-style-B');
+  }
+  else{
+    document.body.style.backgroundColor = '#212121';
+    document.body.classList.add('scroll-style-B');
+    document.body.classList.remove('scroll-style-A');
+  }
+
   return (
-    <div
-      style={
-        theme === "light"
-          ? { backgroundColor: "white" }
-          : { backgroundColor: "#212121" }
-      }
-    >
+    <div>
       <br />
       <Details />
       <About />
