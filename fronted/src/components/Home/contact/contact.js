@@ -57,7 +57,8 @@ const Contact = () => {
     }
     setClick(true);
     setLoding(true);
-    fetch("/sendEmail", {
+    
+    fetch("http://localhost:4000/sendEmail", {
       method: "POST",
       body: JSON.stringify(senedEmail),
       headers: {

@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const cors = require('cors');
 const { urlencoded } = require("body-parser");
 
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, "/public")))
 
 app.use(bodyParser.json(), urlencoded({ extended: false }));
+app.use(cors({origin:true,credentials: true}));
 
 const port = process.env.PORT || 4000;
 
@@ -43,4 +45,6 @@ app.post("/sendEmail", (req, res) => {
   
 });
 
-app.listen(port);
+app.listen(port, function() {
+  console.log('Listening on port %d', port);
+});
