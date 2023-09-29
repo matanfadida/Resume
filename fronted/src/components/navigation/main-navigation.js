@@ -43,7 +43,7 @@ const MainNavigation = () => {
       setActiveContact(location === 'contect')
   }
   const navBarState = () => {
-    console.log('ss',window.scrollY);
+    var pageHigh = document.documentElement.scrollHeight;
     if (window.scrollY > 118 && window.scrollY < 577) {
       UpdateLocation('about');
     }
@@ -53,7 +53,10 @@ const MainNavigation = () => {
     if (window.scrollY > 900 && window.scrollY < 1990) {
       UpdateLocation('skills');
     }
-    if (window.scrollY > 2990 && window.scrollY < 3600) {
+    if (pageHigh === 4651 && window.scrollY > 2990 && window.scrollY < 3600) {
+      UpdateLocation('contect');
+    }
+    if (pageHigh === 3763 && window.scrollY > 1990 && window.scrollY < 3600) {
       UpdateLocation('contect');
     }
     if (window.scrollY < 118) {
