@@ -10,6 +10,7 @@ const Contact = () => {
   const [Loding, setLoding] = useState(false);
   const [click, setClick] = useState(false);
   const [errorTitle, setErrorTitle] = useState(false);
+  const [errorSend, setErrorSend] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const [email, setEmail] = useState("");
@@ -31,6 +32,7 @@ const Contact = () => {
 
   const popMessageHandler = () => {
     setErrorTitle(false);
+    setErrorSend(false)
     setErrorEmail(false);
     setErrorMessage(false);
     setClick(false);
@@ -55,20 +57,23 @@ const Contact = () => {
       setErrorMessage(true);
       return;
     }
-    setClick(true);
     setLoding(true);
     
-    fetch("http://localhost:4000/sendEmail", {
+    const res = await fetch("http://localhost:4000/sendEmail", {
       method: "POST",
       body: JSON.stringify(senedEmail),
       headers: {
         "Content-Type": "application/json",
       },
     });
+    const data = await res.json();
+    
+    if(data.message !== "Successfully"){
+      setErrorSend(true);
+    }else{
+      setClick(true);
+    }
     setLoding(false);
-    setEmail("");
-    setTitle("");
-    setMessage("");
   };
 
   return (
@@ -97,6 +102,7 @@ const Contact = () => {
         click={click}
         errorTitle={errorTitle}
         errorEmail={errorEmail}
+        errorSend={errorSend}
         errorMessage={errorMessage}
       />
     </section>

@@ -15,13 +15,13 @@ app.use(cors({origin:true,credentials: true}));
 
 const port = process.env.PORT || 4000;
 
-app.post("/sendEmail", (req, res) => {
+app.use("/sendEmail", (req, res) => {
   const body = req.body;
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: "matanTestWeb@gmail.com",
-      pass: "pufporjwghustzls",
+      pass: "kjwa mgsv sngw nlue",
     },
     tls: {
       rejectUnauthorized: false,
@@ -37,9 +37,9 @@ app.post("/sendEmail", (req, res) => {
 
   transporter.sendMail(mailDetails, (err, success) => {
     if (err) {
-      res.status(201).send("error");
+      res.status(400).json({message:"error"});
     } else {
-      res.status(201).send("Successfully");
+      res.status(201).json({message: "Successfully"});
     }
   });
   

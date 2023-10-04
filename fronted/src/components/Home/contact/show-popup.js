@@ -1,11 +1,19 @@
 import PopMessage from "../../UI/pop-message";
 
-
 const PopUp = (props) => {
-    const {popMessageHandler, click, errorEmail, errorMessage, errorTitle} = props
+  const { popMessageHandler, click, errorEmail, errorMessage, errorTitle, errorSend } =
+    props;
   return (
     <>
       {" "}
+      {errorSend && (
+        <PopMessage
+          onClick={popMessageHandler}
+          icon="X"
+          title="Error"
+          text="the email not send try again !"
+        />
+      )}
       {errorTitle && (
         <PopMessage
           onClick={popMessageHandler}
@@ -30,7 +38,7 @@ const PopUp = (props) => {
           text="message can't be empty !"
         />
       )}
-      {click && !errorTitle && !errorEmail && !errorMessage && (
+      {click && !errorTitle && !errorEmail && !errorMessage && !errorSend && (
         <PopMessage
           onClick={popMessageHandler}
           icon={"V"}

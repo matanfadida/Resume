@@ -17,7 +17,7 @@ const DetailContact = () => {
           <i className={theme ? style["icon-dark"] : style.icon}>
             <UilMobileAndroid />
           </i>
-          <div>
+          <div className={style["div-phone"]}>
             <h3 className={theme ? style["title-dark"] : style.title}>Phone</h3>
             <span className={theme ? style["subtitle-dark"] : style.subtitle}>
               052-5305623

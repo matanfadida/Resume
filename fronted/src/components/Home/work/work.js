@@ -9,7 +9,7 @@ const Work = () => {
   return (
     <section className={style.section}>
       <div>
-        <h2 id="Skills">Work Experience</h2>
+        <h2 id="Skills" className={theme ? style["skills-title-dark"] : ""}>Work Experience</h2>
         <ul className={style["ul-first"]}>
           <li><h3 className={styleTitle}>Full Stack Developer <span className={style["span-title"]}>|</span> Qualish</h3></li>
           <ul>

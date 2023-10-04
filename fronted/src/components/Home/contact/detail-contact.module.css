@@ -45,11 +45,25 @@
 
 @media only screen and (max-width: 600px) {
     .ul{
-        display: flex;
-        justify-content: center;
         margin: 0px 20px;
     }
+    .ul > li > div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
     .ul > li {
-        margin-left: 15px;
-      }
+      margin-bottom: 20px;
+    }
+    .icon {
+      margin-top: 3px;
+      margin-right: 5px;
+      color: slateblue;
+    }
+    .icon-dark {
+      margin-top: 3px;
+      margin-right: 5px;
+      color: white;
+    }
   }
