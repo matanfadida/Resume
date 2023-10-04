@@ -7,4 +7,4 @@ In my web resume, you can see details about me and send me an email to contact m
 
 # So, get to know me!
 
-url : https://matan-resume.herokuapp.com/
+URL : https://matan-cv.web.app/
