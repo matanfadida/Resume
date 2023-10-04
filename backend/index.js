@@ -8,7 +8,7 @@ const { urlencoded } = require("body-parser");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "/public")))
+// app.use(express.static(path.join(__dirname, "/public")))
 
 app.use(bodyParser.json(), urlencoded({ extended: false }));
 app.use(cors({origin:true,credentials: true}));

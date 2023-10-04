@@ -59,7 +59,7 @@ const Contact = () => {
     }
     setLoding(true);
     
-    const res = await fetch("http://localhost:4000/sendEmail", {
+    const res = await fetch("https://resume-api-mxg0.onrender.com/sendEmail", {
       method: "POST",
       body: JSON.stringify(senedEmail),
       headers: {
@@ -67,7 +67,7 @@ const Contact = () => {
       },
     });
     const data = await res.json();
-    
+
     if(data.message !== "Successfully"){
       setErrorSend(true);
     }else{
